@@ -1,0 +1,32 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  width: 1280px;
+}
+
+.header-container img {
+  border-radius: 20px;
+  width: 200px;
+  margin: 10px;
+}
+
+.header-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 10px;
+  height: 200px;
+}
+
+.header-name {
+  font-size: 32px;
+}
+
+.header-title {
+  font-size: 24px;
+  color: gray;
+}
+
+.header-description {
+  text-justify: distribute;
+}

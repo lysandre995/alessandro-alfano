@@ -1,0 +1,23 @@
+.area-of-expertise-container {
+  width: 1280px;
+  margin: 10px 0;
+  height: 150px;
+}
+
+.area-of-expertise-title {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.area-of-expertise-row {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.expertise {
+  background-color: aquamarine;
+  color: white;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 0 5px;
+}

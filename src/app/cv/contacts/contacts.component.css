@@ -1,0 +1,16 @@
+.contacts-container {
+  display: flex;
+  justify-content: space-evenly;
+  width: 1280px;
+  height: 200px;
+  margin: 0 60px;
+  padding: 10px;
+  background-color: silver;
+  border-radius: 20px;
+}
+
+.contact-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
