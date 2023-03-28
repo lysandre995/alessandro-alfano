@@ -1,16 +1,18 @@
-.area-of-expertise-container {
+.areas-of-expertise-container {
+  display: flex;
+  flex-direction: column;
   width: 1280px;
-  margin: 10px 0;
   height: 150px;
 }
 
-.area-of-expertise-title {
+.areas-of-expertise-title {
   font-size: 20px;
   margin: 20px 0;
 }
 
-.area-of-expertise-row {
+.areas-of-expertise {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 20px;
 }
 
@@ -19,5 +21,5 @@
   color: white;
   border-radius: 4px;
   padding: 4px;
-  margin: 0 5px;
+  margin: 5px;
 }
