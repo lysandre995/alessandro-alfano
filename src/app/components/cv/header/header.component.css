@@ -29,4 +29,28 @@
 
 .header-description {
   text-justify: distribute;
+  text-overflow-ellipsis: true;
 }
+
+@media only screen and (max-width: 848px) {
+  .header-container {
+    justify-content: space-between;
+  }
+  .header-description {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 570px) {
+  .header-container {
+    flex-direction: column;
+  }
+  .header-text-container {
+    height: auto;
+    text-align: center;
+  }
+  .header-description {
+    display: none;
+  }
+}
+

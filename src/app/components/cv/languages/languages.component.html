@@ -1,1 +1,13 @@
-<p>languages works!</p>
+<div class="languages-container">
+  <div class="languages-title">Languages</div>
+  <div class="languages">
+    <ng-container *ngFor="let language of languages">
+      <div class="language-container">
+        <div class="language-spec">{{language.name}}</div>
+        <div [class]="getLanguageLevelClass(language.level)">
+          <div class="language-text">{{language.level}}</div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

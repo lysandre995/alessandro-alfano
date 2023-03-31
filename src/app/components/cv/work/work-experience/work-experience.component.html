@@ -1,11 +1,15 @@
-<div class="work-experience-header">
-    <div class="work-experience-title">
-        <div class="work-experience-job"></div>
-        <div class="work-experience-year"></div>
-    </div>
-    <div class="work-experience-company"></div>
-    <div class="work-experience-description"></div>
-    <div class="work-experience-tasks">
-        <div class="work-experience-task"></div>
-    </div>
+<div class="work-experience-container">
+  <div class="work-experience-title">
+    <div class="work-experience-job">{{experience.job}}</div>
+    <div class="work-experience-company"><a [href]="experience.company.website">{{experience.company.name}}</a></div>
+  </div>
+  <div class="work-date-location">
+    <div class="work-date">{{experience.startDate}} - {{experience.finishDate}}</div>
+    <div class="work-location">{{experience.location}}</div>
+  </div>
+  <ul>
+    <ng-container *ngFor="let duty of experience.duties">
+      <li>{{duty}}</li>
+    </ng-container>
+  </ul>
 </div>

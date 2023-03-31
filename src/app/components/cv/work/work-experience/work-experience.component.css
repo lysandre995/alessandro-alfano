@@ -1,0 +1,22 @@
+.work-experience-container {
+  width: 100%;
+}
+.work-experience-title {
+  font-size: 18px;
+  width: 100%;
+}
+.work-experience-job {
+  font-size: 18px;
+  font-weight: bold;
+   width: 100%;
+ }
+.work-experience-company {
+  font-size: 18px;
+  width: 100%;
+}
+.work-date-location {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-style: italic;
+}

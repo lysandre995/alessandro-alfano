@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./interests-and-hobbies.component.css']
 })
 export class InterestsAndHobbiesComponent {
-
+  interests: any = [
+    "Singing and playing in a rock band",
+    "Acting and theater",
+    "Sailing",
+    "Cooking"
+  ];
 }

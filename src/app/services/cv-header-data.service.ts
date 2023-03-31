@@ -11,10 +11,6 @@ export class CvHeaderDataService {
 
   constructor() { }
 
-  public async ngOnInit() {
-    await this.getRemoteData()
-  }
-
   public get title(): string {
     return this._title;
   }
@@ -23,9 +19,19 @@ export class CvHeaderDataService {
     return this._description;
   }
 
-  private async getRemoteData() {
-    const headerData = (await axios.get(constants.HEADER_DATA_URL)).data
-    this._title = headerData.title
-    this._description = headerData.description
+  public async getRemoteData(): Promise<void> {
+    const { data } = await axios.get(constants.HEADER_DATA_URL, {
+      headers: {
+        "Access-Control-Allow-Credentials": false,
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Methods": "*",
+        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Expose-Headers": "*",
+        "Access-Control-Max-Age": "*",
+        "Access-Control-Request-Headers": "*",
+        "Access-Control-Request-Method": "*",
+      }
+    });
+    return data;
   }
 }

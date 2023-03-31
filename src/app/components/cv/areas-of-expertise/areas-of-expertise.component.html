@@ -1,24 +1,8 @@
 <div class="areas-of-expertise-container">
   <div class="areas-of-expertise-title">Areas of Expertise</div>
   <div class="areas-of-expertise">
-    <div class="expertise">Full Stack Development</div>
-    <div class="expertise">Databases</div>
-    <div class="expertise">Oracle</div>
-    <div class="expertise">AWS Cloud Environment</div>
-    <div class="expertise">Agile Development</div>
-    <div class="expertise">Software Solution Architecture</div>
-    <div class="expertise">Typescript</div>
-    <div class="expertise">Angular</div>
-    <div class="expertise">NestJS</div>
-    <div class="expertise">HTML</div>
-    <div class="expertise">Javascript</div>
-    <div class="expertise">Docker</div>
-    <div class="expertise">CSS</div>
-    <div class="expertise">RxJS</div>
-    <div class="expertise">SQL</div>
-    <div class="expertise">Lua</div>
-    <div class="expertise">C++</div>
-    <div class="expertise">Rust</div>
-    <div class="expertise">PHP</div>
+    <ng-container *ngFor="let expertise of expertises">
+      <div class="expertise">{{expertise}}</div>
+    </ng-container>
   </div>
 </div>

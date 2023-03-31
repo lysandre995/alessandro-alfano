@@ -1,0 +1,26 @@
+.education-experience-container {
+  width: 100%;
+}
+.education-experience-title {
+  font-size: 18px;
+  width: 100%;
+}
+.education-experience-degree {
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+}
+.education-experience-company {
+  font-size: 18px;
+  width: 100%;
+}
+.education-date-location {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-style: italic;
+  margin: 0 0 10px 0;
+}
+.education-location {
+  padding-right: 10px;
+}

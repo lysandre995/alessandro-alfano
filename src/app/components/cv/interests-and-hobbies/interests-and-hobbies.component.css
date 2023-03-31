@@ -1,0 +1,28 @@
+.interests-and-hobbies-container {
+  width: 1280px;
+}
+.interests-and-hobbies-title {
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.interests-and-hobbies {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.interest {
+  padding: 15px;
+  margin: 10px;
+  display: flex;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.interest-text {
+  overflow: auto;
+}

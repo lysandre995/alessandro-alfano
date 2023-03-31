@@ -1,13 +1,16 @@
 <div id="cv" class="cv-container">
-    <app-header></app-header>
-    <app-contacts></app-contacts>
-    <app-areas-of-expertise></app-areas-of-expertise>
-    <app-work></app-work>
-    <app-technical-skills></app-technical-skills>
-    <app-courses-and-training></app-courses-and-training>
-    <app-interests-and-hobbies></app-interests-and-hobbies>
-    <app-personal-projects></app-personal-projects>
-    <app-education></app-education>
-    <app-languages></app-languages>
+  <app-header></app-header>
+  <app-contacts></app-contacts>
+  <app-areas-of-expertise></app-areas-of-expertise>
+  <app-work></app-work>
+  <app-technical-skills></app-technical-skills>
+  <app-courses-and-training></app-courses-and-training>
+  <app-interests-and-hobbies></app-interests-and-hobbies>
+  <app-personal-projects></app-personal-projects>
+  <app-education></app-education>
+  <app-languages></app-languages>
+  <app-gdpr></app-gdpr>
+  <app-signature></app-signature>
 </div>
-<button (click)="toPdf()">Save as PDF</button>
+
+<button printSectionId="cv" ngxPrint [useExistingCss]="true">Save as PDF</button>

@@ -1,0 +1,12 @@
+.education-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 1280px;
+}
+
+.education-title {
+  font-size: 20px;
+  margin: 20px 0;
+  width: 100%;
+}

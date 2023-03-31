@@ -1,0 +1,9 @@
+.signature-container {
+  width: 1280px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.signature-container img {
+  width: 300px;
+}

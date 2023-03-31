@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CvHeaderDataService } from 'src/app/services/cv-header-data.service';
 
 @Component({
   selector: 'app-header',

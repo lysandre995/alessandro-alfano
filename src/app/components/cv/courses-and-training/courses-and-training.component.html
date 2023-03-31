@@ -1,1 +1,11 @@
-<p>courses-and-training works!</p>
+<div class="courses-and-training-container">
+  <div class="course-and-training-title">Courses and Training</div>
+  <div class="courses-container">
+    <ng-container *ngFor="let course of courses">
+      <div class="course">
+        <div class="course-title">{{course.title}}</div>
+        <div class="course-academy"><a [href]="course.academyWebsite">{{course.academy}}</a></div>
+      </div>
+    </ng-container>
+  </div>
+</div>

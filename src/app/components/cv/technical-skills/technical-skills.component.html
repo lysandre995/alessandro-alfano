@@ -1,1 +1,21 @@
-<p>technical-skills works!</p>
+<div class="technical-skills-container">
+  <div class="technical-skills-title">Technical Skills</div>
+  <div class="technical-skills">
+    <div class="technical-skills-header">
+      <div class="skill-header">Category</div>
+      <div class="skill-header">Skill</div>
+      <div class="level-header">Level (1 to 5)</div>
+    </div>
+    <ng-container *ngFor="let skillId of skillKeys">
+        <div class="skill-category-title">{{skillId}}</div>
+        <ng-container *ngFor="let skill of skills[skillId]; let indexOfElement=index;">
+          <div [class]="indexOfElement % 2 === 0 ? 'skill-container' : 'skill-container-colored'">
+            <div></div>
+            <div class="skill">{{skill.name}}</div>
+            <div class="level">{{skill.level}}</div>
+          </div>
+        </ng-container>
+    </ng-container>
+  </div>
+</div>
+

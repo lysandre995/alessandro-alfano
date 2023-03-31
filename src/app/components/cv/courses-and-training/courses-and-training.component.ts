@@ -6,5 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./courses-and-training.component.css']
 })
 export class CoursesAndTrainingComponent {
-
+  courses: any = [
+    {title: "AWS Software Solution Architect - Associate (11/2022)", academy: "beSharp Srl", academyWebsite: "https://www.besharp.it/"}
+  ];
 }
