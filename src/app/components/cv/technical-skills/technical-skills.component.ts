@@ -17,6 +17,7 @@ export class TechnicalSkillsComponent {
       {name: "HTML", level: "5"},
       {name: "CSS", level: "4"},
       {name: "Rust", level: "3.5"},
+      {name: "Java", level: "3.5"},
     ],
     ["Application frameworks"]: [
       {name: "Angular", level: "4"},

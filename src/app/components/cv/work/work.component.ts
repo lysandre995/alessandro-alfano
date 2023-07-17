@@ -17,7 +17,10 @@ export class WorkComponent {
       duties: [
         "Created web applications with different technology stacks such as Typescript (frontend in Angular, backend in NestJS/Express), PHP",
         "Collaborated with major software companies (like beSharp, Entopan and others) to create solutions for large international clients using Typescript, NodeJS and AWS",
-        "Contributed to the open-source project Leapp for cloud access security, and its commercial version, Leapp Team"
+        "Contributed to the open-source project Leapp for cloud access security, and its commercial version, Leapp Team",
+        "Worked on billing flow management microservice application written in Java",
+        "Collaborated on projects related to AI, such as technical assistants, ticket classifiers and others",
+        "Worked on a PDF text extractor and clusterizer for creating a virtual library from which AI generative models can draw to construct technical responses to user requests"
       ]
     },
     {
