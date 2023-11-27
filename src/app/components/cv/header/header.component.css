@@ -30,6 +30,7 @@
 .header-description {
   text-justify: distribute;
   text-overflow-ellipsis: true;
+  font-size: 14px;
 }
 
 @media only screen and (max-width: 848px) {
