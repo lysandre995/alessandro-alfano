@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-gdpr',
@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./gdpr.component.css']
 })
 export class GdprComponent {
-
+  @Input()
+  gdpr: any;
 }

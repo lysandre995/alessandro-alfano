@@ -2,10 +2,12 @@
   <div class="nav-bar-container">
     <div class="nav-bar-title"><a class="button" routerLink="/"routerLinkActive="activebutton" ariaCurrentWhenActive="page">Alessandro Alfano</a></div>
     <div class="nav-bar-sections">
-      <div class="nav-bar-section"><a class="button" routerLink="/cv" routerLinkActive="activebutton" ariaCurrentWhenActive="page">CV</a></div>
-      <div class="nav-bar-section"><a class="button" routerLink="/contacts" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Contacts</a></div>
     </div>
-    <div class="nav-bar-hamburger" (click)="toggleModal()"><a><fa-icon [icon]="faBars"></fa-icon></a></div>
+    <div class="nav-bar-hamburger" (click)="toggleModal()">
+      <a>
+        <i class="ph-bold ph-list"></i>
+      </a>
+    </div>
   </div>
   <div id="nav-bar-modal-id" class="nav-bar-modal">
     <div class="nav-bar-section" (click)="toggleModal()"><a class="button" routerLink="/bio" routerLinkActive="activebutton" ariaCurrentWhenActive="page">Bio</a></div>

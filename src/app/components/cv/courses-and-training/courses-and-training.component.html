@@ -3,8 +3,8 @@
   <div class="courses-container">
     <ng-container *ngFor="let course of courses">
       <div class="course">
-        <div class="course-title">{{course.title}}</div>
-        <div class="course-academy"><a [href]="course.academyWebsite">{{course.academy}}</a></div>
+        <div class="course-title">{{course.name}} ({{course.period}})</div>
+        <div class="course-academy"><a [href]="course.erogatorLink">{{course.erogator}}</a></div>
       </div>
     </ng-container>
   </div>

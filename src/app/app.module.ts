@@ -18,11 +18,10 @@ import { AreasOfExpertiseComponent } from './components/cv/areas-of-expertise/ar
 import { InterestsAndHobbiesComponent } from './components/cv/interests-and-hobbies/interests-and-hobbies.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { CvComponent } from './components/cv/cv.component';
-import { HomepageComponent } from './components/homepage/homepage.component';
 import { FooterComponent } from './components//footer/footer.component';
 import { AppRoutingModule } from './app-routing.module';
 import { WorkExperienceComponent } from './components/cv/work/work-experience/work-experience.component';
-import { CvHeaderDataService } from './services/cv-header-data.service';
+import { DataService } from './services/data.service';
 import { EducationExperienceComponent } from './components/cv/education/education-experience/education-experience.component';
 import { NgxPrintModule } from "ngx-print";
 import { SignatureComponent } from "./components/cv/signature/signature.component";
@@ -45,7 +44,6 @@ import { GdprComponent } from './components/cv/gdpr/gdpr.component';
     InterestsAndHobbiesComponent,
     NavBarComponent,
     CvComponent,
-    HomepageComponent,
     FooterComponent,
     WorkExperienceComponent,
     EducationExperienceComponent,
@@ -59,7 +57,7 @@ import { GdprComponent } from './components/cv/gdpr/gdpr.component';
     HttpClientModule,
     NgxPrintModule
   ],
-  providers: [CvHeaderDataService],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

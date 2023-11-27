@@ -1,15 +1,15 @@
 <div class="work-experience-container">
   <div class="work-experience-title">
-    <div class="work-experience-job">{{experience.job}}</div>
-    <div class="work-experience-company"><a [href]="experience.company.website">{{experience.company.name}}</a></div>
+    <div class="work-experience-job">{{experience.role}}</div>
+    <div class="work-experience-company"><a [href]="experience.companyLink">{{experience.company}}</a></div>
   </div>
   <div class="work-date-location">
-    <div class="work-date">{{experience.startDate}} - {{experience.finishDate}}</div>
+    <div class="work-date">{{experience.period.start}} - {{experience.period.end}}</div>
     <div class="work-location">{{experience.location}}</div>
   </div>
   <ul>
-    <ng-container *ngFor="let duty of experience.duties">
-      <li>{{duty}}</li>
+    <ng-container *ngFor="let task of experience.tasks">
+      <li>{{task}}</li>
     </ng-container>
   </ul>
 </div>

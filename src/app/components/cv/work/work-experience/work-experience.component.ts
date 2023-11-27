@@ -8,12 +8,5 @@ import { WorkExperienceInterface } from "../../../../interfaces/workExperienceIn
 })
 export class WorkExperienceComponent {
   @Input()
-  experience: WorkExperienceInterface = {
-    job: "",
-    company: {name: "", website: ""},
-    startDate: "",
-    finishDate: "",
-    location: "",
-    duties: [],
-  };
+  experience: any = {};
 }

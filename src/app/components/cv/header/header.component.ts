@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { CvHeaderDataService } from 'src/app/services/cv-header-data.service';
+import { Component, Input, OnInit } from '@angular/core';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-header',
@@ -7,4 +7,15 @@ import { CvHeaderDataService } from 'src/app/services/cv-header-data.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
+  @Input()
+  name: string = "";
+
+  @Input()
+  title: string = "";
+
+  @Input()
+  description: string = "";
+
+  @Input()
+  profileImg: string = "";
 }

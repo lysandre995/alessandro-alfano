@@ -1,12 +1,10 @@
 <div class="header-container">
-    <img src="https://github.com/lysandre995/alessandro-alfano-website-data/raw/main/profile-img.png" width=200 height=200 alt="">
+    <img src="{{profileImg}}" width=200 height=200 alt="">
     <div class="header-text-container">
       <div>
-        <div class="header-name">Alessandro Alfano</div>
-        <div class="header-title">Software Engineer</div>
+        <div class="header-name">{{ name }}</div>
+        <div class="header-title">{{ title }}</div>
       </div>
-      <div class="header-description">Alessandro Alfano is a versatile, diverse background and innovative software engineer with a passion for coding. He has expertise in Oracle databases, AWS cloud environments, and a wide range of languages and frameworks.
-        In his free time he realize little projects as videogames (majorly developed in Lua and Love2d) and web sites. Alessandro is an excellent communicator, team player, and has a great love for singing, theater, sailing, cooking, and coaching soccer. His enthusiasm is contagious, and he approaches every project with energy and creativity.
-      </div>
+      <div class="header-description">{{ description }}</div>
     </div>
 </div>

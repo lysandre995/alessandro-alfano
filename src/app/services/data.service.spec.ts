@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { CvHeaderDataService } from './cv-header-data.service';
+import { DataService } from './data.service';
 
 describe('HeaderDataService', () => {
-  let service: CvHeaderDataService;
+  let service: DataService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(CvHeaderDataService);
+    service = TestBed.inject(DataService);
   });
 
   it('should be created', () => {

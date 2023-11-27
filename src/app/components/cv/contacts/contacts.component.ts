@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { faEnvelopeSquare, faMobilePhone, faMapPin, faCodeBranch, faLink, faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-contacts',
@@ -7,10 +6,7 @@ import { faEnvelopeSquare, faMobilePhone, faMapPin, faCodeBranch, faLink, faGlob
   styleUrls: ['./contacts.component.css']
 })
 export class ContactsComponent {
-  faEnvelopeSquare = faEnvelopeSquare;
-  faMobilePhone = faMobilePhone;
-  faMapPin = faMapPin;
-  faCodeBranch = faCodeBranch;
-  faLink = faLink;
-  faGlobe = faGlobe;
+  @Input()
+  contacts: any;
+  protected readonly encodeURIComponent = encodeURIComponent;
 }

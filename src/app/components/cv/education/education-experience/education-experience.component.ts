@@ -8,11 +8,5 @@ import { EducationExperienceInterface } from "../../../../interfaces/educationEx
 })
 export class EducationExperienceComponent {
   @Input()
-  experience: EducationExperienceInterface = {
-    degree: "",
-    school: {name: "", website: ""},
-    startDate: "",
-    finishDate: "",
-    location: ""
-  }
+  experience: any;
 }

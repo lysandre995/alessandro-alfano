@@ -30,6 +30,7 @@ a:hover {
 app-header {
   display: flex;
   justify-content: center;
+  margin-top: 30px;
 }
 
 app-contacts {
@@ -59,6 +60,7 @@ app-technical-skills {
 app-courses-and-training {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 app-interests-and-hobbies {

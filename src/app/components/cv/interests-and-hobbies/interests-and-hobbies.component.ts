@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-interests-and-hobbies',
@@ -6,10 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./interests-and-hobbies.component.css']
 })
 export class InterestsAndHobbiesComponent {
-  interests: any = [
-    "Singing and playing in a rock band",
-    "Acting and theater",
-    "Sailing",
-    "Cooking"
-  ];
+  @Input()
+  interests: any;
 }

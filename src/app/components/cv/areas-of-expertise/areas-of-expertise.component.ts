@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-areas-of-expertise',
@@ -6,12 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./areas-of-expertise.component.css']
 })
 export class AreasOfExpertiseComponent {
-  expertises = [
-    "Full Stack Development",
-    "Databases",
-    "Oracle",
-    "AWS Cloud Environment",
-    "Agile Development",
-    "Software Solution Architecture"
-  ]
+  @Input()
+  expertises: string[] = [];
 }

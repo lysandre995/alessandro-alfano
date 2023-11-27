@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-personal-projects',
@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./personal-projects.component.css']
 })
 export class PersonalProjectsComponent {
-  projects: string[] = [
-    "Developed several small video games in Ruby and Lua",
-    "Creates websites for friends, personal use and didactic purpose"
-  ];
+  @Input()
+  projects: any;
 }

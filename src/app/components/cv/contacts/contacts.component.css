@@ -13,3 +13,13 @@
   justify-content: space-evenly;
   margin: 20px;
 }
+
+.contact-entry {
+  display: flex;
+  align-items: center;
+}
+
+.contact-icon {
+  font-size: 25px;
+  margin-right: 10px;
+}

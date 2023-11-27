@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-languages',
@@ -6,11 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./languages.component.css']
 })
 export class LanguagesComponent {
-  languages: any = [
-    {name: "Italian", level: "C2"},
-    {name: "English", level: "C1"},
-    {name: "French", level: "A2"}
-  ];
+  @Input()
+  languages: any;
 
   getLanguageLevelClass(level: string): string {
     return `language-${level}`;
