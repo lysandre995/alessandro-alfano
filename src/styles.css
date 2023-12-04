@@ -105,3 +105,9 @@ app-footer {
   height: 60px;
   line-height: 60px;
 }
+
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0 8px;
+  }
+}

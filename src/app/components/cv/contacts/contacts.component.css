@@ -23,3 +23,20 @@
   font-size: 25px;
   margin-right: 10px;
 }
+
+@media screen and (max-width: 768px) {
+  .contacts-container {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    margin: 2px;
+    padding: 8px;
+  }
+  .contact-column {
+    margin: 0;
+    padding: 0 20px;
+  }
+  .contact-entry {
+    margin: 5px;
+  }
+}
