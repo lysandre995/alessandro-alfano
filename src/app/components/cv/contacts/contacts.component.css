@@ -1,7 +1,7 @@
 .contacts-container {
   display: flex;
   justify-content: space-evenly;
-  width: 1280px;
+  max-width: 1280px;
   height: 200px;
   background-color: silver;
   border-radius: 20px;
@@ -27,14 +27,12 @@
 @media screen and (max-width: 768px) {
   .contacts-container {
     flex-direction: column;
-    width: 100%;
     height: auto;
-    margin: 2px;
+    width: 100%;
     padding: 8px;
+    border-radius: 0;
   }
   .contact-column {
-    margin: 0;
-    padding: 0 20px;
   }
   .contact-entry {
     margin: 5px;
