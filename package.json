@@ -4,16 +4,15 @@
   "description": "Alessandro Alfano's CV/Portfolio with dual retro themes",
   "scripts": {
     "dev": "eleventy --serve --port=3000",
-    "build:site": "eleventy",
-    "build:pdf": "markdown-pdf _site/cv-classic.md -o _site/cv-classic.pdf && markdown-pdf _site/cv-europass.md -o _site/cv-europass.pdf",
-    "build": "npm run build:site && npm run build:pdf",
-    "clean": "rm -rf _site"
+    "build": "eleventy",
+    "clean": "rm -rf _site",
+    "pdf": "node scripts/generate-pdf.js"
   },
   "dependencies": {
     "@11ty/eleventy": "^3.0.0"
   },
   "devDependencies": {
-    "markdown-pdf": "^11.0.0"
+    "md-to-pdf": "^5.2.4"
   },
   "author": "Alessandro Alfano",
   "license": "MIT",

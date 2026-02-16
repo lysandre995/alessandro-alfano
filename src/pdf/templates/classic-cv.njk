@@ -1,5 +1,5 @@
 ---
-permalink: /cv-classic.md
+permalink: /pdf-temp/cv-classic.md
 ---
 # {{ cv.identity.fullName }}
 
@@ -9,12 +9,11 @@ permalink: /cv-classic.md
 
 ---
 
-## Contact
+## Contact Information
 
 - **Email:** {{ cv.contact.email }}
 - **Phone:** {{ cv.contact.phone }}
-- **Location:** {{ cv.contact.location.city }}, {{ cv.contact.location.province }}, {{ cv.contact.location.country }}
-- **Work Region:** {{ cv.contact.location.workRegion }}
+- **Location:** {{ cv.contact.location.city }}, {{ cv.contact.location.country }}
 - **Website:** {{ cv.contact.web.website }}
 - **GitHub:** {{ cv.contact.web.github }}
 - **LinkedIn:** {{ cv.contact.web.linkedin }}
@@ -24,8 +23,9 @@ permalink: /cv-classic.md
 ## Professional Experience
 
 {% for job in cv.experience %}
-### {{ job.role }} - {{ job.company }}
-*{{ job.period.start }} - {{ job.period.end or 'Present' }}* | {{ job.location }}
+### {{ job.role }}
+**{{ job.company }}** | {{ job.location }}
+*{{ job.period.start }} - {{ job.period.end or 'Present' }}*
 
 {{ job.companyDescription }}
 
@@ -36,7 +36,7 @@ permalink: /cv-classic.md
 
 **Technologies:** {{ job.technologies | join }}
 
-**Highlight:** {{ job.highlight }}
+**Key Achievement:** {{ job.highlight }}
 
 {% endfor %}
 
@@ -62,36 +62,38 @@ permalink: /cv-classic.md
 ### {{ comp.name }}
 {{ comp.description }}
 
-**Keywords:** {{ comp.keywords | join }}
+**Key Skills:** {{ comp.keywords | join }}
+
 {% endfor %}
 
 ---
 
 ## Technical Skills
 
-**Architecture & Design:** {{ cv.technicalSkills.architecture.skills | join }}
+### Architecture & Design
+{{ cv.technicalSkills.architecture.skills | join }}
 
-**Programming Languages:**
-- Primary: {{ cv.technicalSkills.languages.primary | join }}
-- Secondary: {{ cv.technicalSkills.languages.secondary | join }}
-- Scripting: {{ cv.technicalSkills.languages.scripting | join }}
+### Programming Languages
+- **Primary:** {{ cv.technicalSkills.languages.primary | join }}
+- **Secondary:** {{ cv.technicalSkills.languages.secondary | join }}
+- **Scripting:** {{ cv.technicalSkills.languages.scripting | join }}
 
-**Frameworks & Platforms:**
-- Backend: {{ cv.technicalSkills.frameworks.backend | join }}
-- Frontend: {{ cv.technicalSkills.frameworks.frontend | join }}
-- Game Development: {{ cv.technicalSkills.frameworks.gamedev | join }}
+### Frameworks & Libraries
+- **Backend:** {{ cv.technicalSkills.frameworks.backend | join }}
+- **Frontend:** {{ cv.technicalSkills.frameworks.frontend | join }}
 
-**Data & Databases:**
-- Relational: {{ cv.technicalSkills.data.relational | join }}
-- NoSQL: {{ cv.technicalSkills.data.nosql | join }}
-- Cloud: {{ cv.technicalSkills.data.cloud | join }}
+### Databases
+- **Relational:** {{ cv.technicalSkills.data.relational | join }}
+- **NoSQL:** {{ cv.technicalSkills.data.nosql | join }}
+- **Messaging:** {{ cv.technicalSkills.data.messaging | join }}
 
-**Infrastructure & DevOps:**
-- Containerization: {{ cv.technicalSkills.infrastructure.containerization | join }}
-- CI/CD: {{ cv.technicalSkills.infrastructure.cicd | join }}
-- Cloud: {{ cv.technicalSkills.infrastructure.cloud | join }}
+### Infrastructure & DevOps
+- **Containerization:** {{ cv.technicalSkills.infrastructure.containerization | join }}
+- **CI/CD:** {{ cv.technicalSkills.infrastructure.cicd | join }}
+- **Cloud Platforms:** {{ cv.technicalSkills.infrastructure.cloud | join }}
 
-**Integration & Protocols:** {{ cv.technicalSkills.integration.protocols | join }}
+### Integration & Protocols
+{{ cv.technicalSkills.integration.protocols | join }}
 
 ---
 
@@ -99,6 +101,7 @@ permalink: /cv-classic.md
 
 {% for cert in cv.certifications %}
 - **{{ cert.name }}** - {{ cert.issuer }} ({{ cert.date }})
+  {% if cert.credentialId %}Credential ID: {{ cert.credentialId }}{% endif %}
 {% endfor %}
 
 ---
@@ -119,6 +122,7 @@ permalink: /cv-classic.md
 {% endif %}
 
 **Technologies:** {{ project.technologies | join }}
+
 {% endfor %}
 
 ---
@@ -126,11 +130,15 @@ permalink: /cv-classic.md
 ## Open Source Contributions
 
 {% for os in cv.openSource %}
-**{{ os.project }}** - {{ os.organization }}
+### {{ os.project }}
+**{{ os.organization }}**
+
 {{ os.description }}
-{{ os.url }}
 
 {{ os.contribution }}
+
+{{ os.url }}
+
 {% endfor %}
 
 ---
@@ -145,24 +153,19 @@ permalink: /cv-classic.md
 
 ## Interests
 
-**Creative:**
+### Creative Pursuits
 {% for interest in cv.interests.creative %}
-- {{ interest.activity }}{% if interest.details %}: {{ interest.details }}{% endif %}
+- **{{ interest.activity }}**{% if interest.details %}: {{ interest.details }}{% endif %}
 {% endfor %}
 
-**Physical:**
+### Physical Activities
 {% for interest in cv.interests.physical %}
-- {{ interest.activity }}{% if interest.details %}: {{ interest.details }}{% endif %}
-{% endfor %}
-
-**Other:**
-{% for interest in cv.interests.other %}
-- {{ interest.activity }}{% if interest.details %}: {{ interest.details }}{% endif %}
+- **{{ interest.activity }}**{% if interest.details %}: {{ interest.details }}{% endif %}
 {% endfor %}
 
 ---
 
-## Values
+## Professional Values
 
 {% for value in cv.values %}
 - {{ value }}

@@ -1,0 +1,133 @@
+---
+permalink: /pdf-temp/cv-europass.md
+---
+# CURRICULUM VITAE
+
+## PERSONAL INFORMATION
+
+| | |
+|---|---|
+| **Name** | {{ cv.identity.fullName }} |
+| **Address** | {{ cv.contact.location.city }}, {{ cv.contact.location.province }}, {{ cv.contact.location.country }} |
+| **Telephone** | {{ cv.contact.phone }} |
+| **E-mail** | {{ cv.contact.email }} |
+| **Website** | {{ cv.contact.web.website }} |
+| **LinkedIn** | {{ cv.contact.web.linkedin }} |
+| **GitHub** | {{ cv.contact.web.github }} |
+
+---
+
+## WORK EXPERIENCE
+
+{% for job in cv.experience %}
+### {{ job.period.start }} - {{ job.period.end or 'Present' }}
+
+**Position held:** {{ job.role }}
+
+**Main activities and responsibilities:**
+
+{% for resp in job.responsibilities %}
+- {{ resp }}
+{% endfor %}
+
+**Key achievement:** {{ job.highlight }}
+
+**Name and address of employer:** {{ job.company }}, {{ job.location }}
+
+**Type of business or sector:** {{ job.companyDescription }}
+
+**Technologies used:** {{ job.technologies | join }}
+
+---
+
+{% endfor %}
+
+## EDUCATION AND TRAINING
+
+{% for edu in cv.education.formal %}
+### {{ edu.period.start }} - {{ edu.period.end or edu.period.status }}
+
+**Title of qualification awarded:** {{ edu.degree }}
+
+**Principal subjects/occupational skills covered:** {{ edu.note or 'Computer Engineering, Software Development, System Architecture' }}
+
+**Name and type of organization providing education and training:** {{ edu.institution }}, {{ edu.location }}
+
+{% endfor %}
+
+**Educational background:** {{ cv.education.narrative }}
+
+---
+
+## PERSONAL SKILLS AND COMPETENCES
+
+### Mother tongue
+Italian
+
+### Other languages
+
+| Language | Level |
+|---|---|
+{% for lang in cv.languages %}{% if lang.name != 'Italian' %}| {{ lang.name }} | {{ lang.level }} |
+{% endif %}{% endfor %}
+
+### Technical skills and competences
+
+{% for comp in cv.coreCompetencies %}
+**{{ comp.name }}:** {{ comp.description }}
+
+*Key skills:* {{ comp.keywords | join }}
+
+{% endfor %}
+
+### Computer skills and competences
+
+**Programming Languages:** {{ cv.technicalSkills.languages.primary | join }}, {{ cv.technicalSkills.languages.secondary | join }}
+
+**Frameworks:** {{ cv.technicalSkills.frameworks.backend | join }}, {{ cv.technicalSkills.frameworks.frontend | join }}
+
+**Infrastructure:** {{ cv.technicalSkills.infrastructure.containerization | join }}, {{ cv.technicalSkills.infrastructure.cicd | join }}, {{ cv.technicalSkills.infrastructure.cloud | join }}
+
+**Databases:** {{ cv.technicalSkills.data.relational | join }}, {{ cv.technicalSkills.data.nosql | join }}
+
+**Architecture:** {{ cv.technicalSkills.architecture.skills | join }}
+
+---
+
+## ADDITIONAL INFORMATION
+
+### Certifications
+
+{% for cert in cv.certifications %}
+- **{{ cert.name }}** ({{ cert.issuer }}, {{ cert.date }}){% if cert.credentialId %} - Credential ID: {{ cert.credentialId }}{% endif %}
+{% endfor %}
+
+### Open Source Contributions
+
+{% for os in cv.openSource %}
+- **{{ os.project }}** ({{ os.organization }}): {{ os.contribution }}
+  {{ os.url }}
+{% endfor %}
+
+### Professional Projects
+
+{% for project in cv.projects.featured %}
+- **{{ project.name }}** ({{ project.type }}): {{ project.description }}
+  *Technologies:* {{ project.technologies | join }}
+{% endfor %}
+
+### Interests and Activities
+
+**Creative:**
+{% for interest in cv.interests.creative %}
+- {{ interest.activity }}{% if interest.details %}: {{ interest.details }}{% endif %}
+{% endfor %}
+
+**Physical:**
+{% for interest in cv.interests.physical %}
+- {{ interest.activity }}{% if interest.details %}: {{ interest.details }}{% endif %}
+{% endfor %}
+
+---
+
+{{ cv.legal.gdpr }}

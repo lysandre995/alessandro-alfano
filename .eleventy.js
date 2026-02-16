@@ -2,6 +2,7 @@ module.exports = (eleventyConfig) => {
   // Pass through static assets
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy("src/favicon.svg");
+  eleventyConfig.addPassthroughCopy({"src/pdf/*.pdf": "."});
 
   // Watch for changes
   eleventyConfig.addWatchTarget("src/assets/css/");
