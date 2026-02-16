@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Cerchio esterno con gradiente retro -->
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2196F3;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Cerchio di sfondo -->
+  <circle cx="50" cy="50" r="48" fill="url(#grad1)" stroke="#212529" stroke-width="3"/>
+
+  <!-- Cerchio interno -->
+  <circle cx="50" cy="50" r="42" fill="none" stroke="#fff" stroke-width="1.5" opacity="0.3"/>
+
+  <!-- Prima A (corsiva) -->
+  <text x="32" y="65" font-family="Georgia, serif" font-size="42" font-style="italic" font-weight="bold" fill="#fff" opacity="0.95">A</text>
+
+  <!-- Seconda A (corsiva, leggermente spostata) -->
+  <text x="52" y="65" font-family="Georgia, serif" font-size="42" font-style="italic" font-weight="bold" fill="#fff" opacity="0.85">A</text>
+
+  <!-- Highlight per effetto 3D -->
+  <circle cx="35" cy="25" r="8" fill="#fff" opacity="0.2"/>
+</svg>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="nes">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ cv.identity.fullName }} - CV</title>
+
+  <!-- NES.css -->
+  <link href="https://unpkg.com/nes.css@latest/css/nes.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+
+  <!-- 98.css -->
+  <link rel="stylesheet" href="https://unpkg.com/98.css">
+
+  <!-- Pixelify Sans for 98 theme -->
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Pixelarticons -->
+  <link rel="stylesheet" href="https://unpkg.com/pixelarticons@1.8.1/css/pixelarticons.min.css">
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="/assets/css/theme-nes.css?v=3">
+  <link rel="stylesheet" href="/assets/css/theme-98.css?v=3">
+  <link rel="stylesheet" href="/assets/css/layout.css?v=3">
+
+  <meta name="description" content="{{ cv.summary.short }}">
+  <meta name="author" content="{{ cv.identity.fullName }}">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+</head>
+<body>
+  <!-- Theme Toggle Button -->
+  <div class="theme-toggle-container">
+    <button id="theme-toggle" aria-label="Switch Theme">
+      <span class="theme-icon" data-theme-icon="nes">🎮</span>
+      <span class="theme-icon" data-theme-icon="98">💾</span>
+    </button>
+  </div>
+
+  <!-- PDF Export Buttons -->
+  <div class="pdf-export-container">
+    <a href="/cv-classic.pdf" download class="pdf-btn">📄 Classic CV</a>
+    <a href="/cv-europass.pdf" download class="pdf-btn">🇪🇺 Europass CV</a>
+  </div>
+
+  <main class="cv-container">
+    {{ content | safe }}
+  </main>
+
+  <script src="/assets/js/theme-toggle.js"></script>
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/win98-interactions.js"></script>
+  <script src="/assets/js/nes-interactions.js"></script>
+</body>
+</html>

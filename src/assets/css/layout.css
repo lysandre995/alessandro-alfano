@@ -1,0 +1,168 @@
+/* Common layout styles (theme-agnostic) */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Theme toggle button positioning */
+.theme-toggle-container {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 1000;
+}
+
+.theme-toggle-btn,
+#theme-toggle {
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 0.75rem 1rem;
+  border: 3px solid #000;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+  font-weight: bold;
+  font-family: 'Press Start 2P', monospace;
+  min-width: 140px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.theme-toggle-btn:hover,
+#theme-toggle:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+  background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+}
+
+.theme-toggle-btn:active,
+#theme-toggle:active {
+  transform: translateY(0);
+}
+
+.theme-icon {
+  display: none;
+}
+
+html[data-theme="nes"] .theme-icon[data-theme-icon="nes"] {
+  display: inline-block;
+}
+
+html[data-theme="nes"] .theme-icon[data-theme-icon="nes"]::before {
+  content: "NES ";
+  font-size: 0.8rem;
+}
+
+html[data-theme="98"] .theme-icon[data-theme-icon="98"] {
+  display: inline-block;
+}
+
+html[data-theme="98"] .theme-icon[data-theme-icon="98"]::before {
+  content: "WIN98 ";
+  font-size: 0.8rem;
+}
+
+/* PDF export buttons */
+.pdf-export-container {
+  position: fixed;
+  top: 5.5rem;
+  right: 1rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pdf-btn {
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  border: 2px solid #000;
+  background: rgba(255, 255, 255, 0.95);
+  font-size: 0.8rem;
+  text-decoration: none;
+  color: #000;
+  white-space: nowrap;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  transition: transform 0.2s;
+  text-align: center;
+  font-family: 'Press Start 2P', Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+}
+
+.pdf-btn:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 1);
+}
+
+/* Hide buttons in print mode */
+@media print {
+  .theme-toggle-container,
+  .pdf-export-container {
+    display: none !important;
+  }
+}
+
+/* Smooth scroll anchors */
+section {
+  scroll-margin-top: 2rem;
+}
+
+/* Responsive utilities */
+.mobile-only {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-only {
+    display: block;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
+  .theme-toggle-container {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+
+  .pdf-export-container {
+    top: 3.5rem; /* Più vicino al toggle */
+    right: 0.5rem;
+  }
+
+  .pdf-btn {
+    font-size: 0.55rem;
+    padding: 0.35rem 0.5rem;
+    min-width: 100px;
+  }
+
+  .theme-toggle-btn,
+  #theme-toggle {
+    font-size: 0.9rem;
+    padding: 0.5rem 0.6rem;
+    min-width: 100px;
+  }
+
+  .theme-icon::before {
+    font-size: 0.6rem !important;
+  }
+}

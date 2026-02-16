@@ -1,0 +1,74 @@
+{% import "macros/icon.njk" as icons %}
+<section id="experience" class="section experience-section">
+  <h2 class="section-title">Professional Experience</h2>
+
+  <!-- NES Theme -->
+  <div data-theme-target="nes">
+    {% for job in cv.experience %}
+    <div class="nes-container with-title">
+      <p class="title">{{ job.role }} @ {{ job.company }}</p>
+      <div class="job-meta">
+        <span class="nes-text is-primary">{{ icons.icon("map") }} {{ job.location }}</span>
+        <span class="nes-text is-disabled">{{ icons.icon("calendar") }} {{ job.period | formatPeriod }}</span>
+      </div>
+      <p class="company-description">{{ job.companyDescription }}</p>
+      <p class="highlight">{{ icons.icon("trophy") }} {{ job.highlight }}</p>
+
+      <h4>Key Responsibilities:</h4>
+      <ul class="nes-list is-disc">
+        {% for resp in job.responsibilities %}
+        <li>{{ resp }}</li>
+        {% endfor %}
+      </ul>
+
+      <div class="technologies">
+        <strong>Technologies:</strong>
+        {% for tech in job.technologies %}
+        <span class="nes-badge">
+          <span class="is-warning">{{ tech }}</span>
+        </span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- 98 Theme -->
+  <div data-theme-target="98">
+    {% for job in cv.experience %}
+    <div class="window job-window">
+      <div class="title-bar">
+        <div class="title-bar-text">{{ job.company }}</div>
+      </div>
+      <div class="window-body">
+        <h3>{{ job.role }}</h3>
+        <div class="field-row">
+          <label>Location:</label> {{ job.location }}
+        </div>
+        <div class="field-row">
+          <label>Period:</label> {{ job.period | formatPeriod }}
+        </div>
+        <p><em>{{ job.companyDescription }}</em></p>
+
+        <fieldset>
+          <legend>Highlight</legend>
+          <p>{{ job.highlight }}</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Responsibilities</legend>
+          <ul>
+            {% for resp in job.responsibilities %}
+            <li>{{ resp }}</li>
+            {% endfor %}
+          </ul>
+        </fieldset>
+
+        <div class="status-bar">
+          <p class="status-bar-field">Technologies: {{ job.technologies | join }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

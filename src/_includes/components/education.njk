@@ -1,0 +1,54 @@
+{% import "macros/icon.njk" as icons %}
+<section id="education" class="section education-section">
+  <h2 class="section-title">Education</h2>
+
+  <!-- NES Theme -->
+  <div data-theme-target="nes">
+    {% for edu in cv.education.formal %}
+    <div class="nes-container">
+      <h3>{{ edu.degree }}</h3>
+      <p class="nes-text is-primary">{{ icons.icon("book") }} {{ edu.institution }} - {{ edu.location }}</p>
+      <p class="nes-text is-disabled">{{ icons.icon("calendar") }} {{ edu.period.start }} - {{ edu.period.end or edu.period.status }}</p>
+      {% if edu.note %}
+      <p><em>{{ edu.note }}</em></p>
+      {% endif %}
+    </div>
+    {% endfor %}
+
+    <div class="nes-container is-dark">
+      <p>{{ cv.education.narrative }}</p>
+    </div>
+  </div>
+
+  <!-- 98 Theme -->
+  <div data-theme-target="98">
+    {% for edu in cv.education.formal %}
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">{{ edu.institution }}</div>
+      </div>
+      <div class="window-body">
+        <h3>{{ edu.degree }}</h3>
+        <div class="field-row">
+          <label>Location:</label> {{ edu.location }}
+        </div>
+        <div class="field-row">
+          <label>Period:</label> {{ edu.period.start }} - {{ edu.period.end or edu.period.status }}
+        </div>
+        {% if edu.note %}
+        <p><em>{{ edu.note }}</em></p>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Academic Journey</div>
+      </div>
+      <div class="window-body">
+        <p>{{ cv.education.narrative }}</p>
+      </div>
+    </div>
+  </div>
+</section>

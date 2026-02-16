@@ -1,0 +1,54 @@
+{% import "macros/icon.njk" as icons %}
+<section id="contact" class="section contact-section">
+  <h2 class="section-title">Contact Information</h2>
+
+  <!-- NES Theme -->
+  <div data-theme-target="nes">
+    <div class="nes-container is-dark">
+      <div class="contact-info">
+        <p>{{ icons.icon("mail") }} <strong>Email:</strong> <a href="mailto:{{ cv.contact.email }}">{{ cv.contact.email }}</a></p>
+        <p>{{ icons.icon("device-phone") }} <strong>Phone:</strong> {{ cv.contact.phone }}</p>
+        <p>{{ icons.icon("map") }} <strong>Location:</strong> {{ cv.contact.location.city }}, {{ cv.contact.location.province }}, {{ cv.contact.location.country }}</p>
+        <p>{{ icons.icon("briefcase") }} <strong>Work Region:</strong> {{ cv.contact.location.workRegion }}</p>
+      </div>
+
+      <div class="contact-links">
+        <a href="{{ cv.contact.web.website }}" target="_blank" class="nes-btn is-primary">Website</a>
+        <a href="{{ cv.contact.web.github }}" target="_blank" class="nes-btn is-success">GitHub</a>
+        <a href="{{ cv.contact.web.linkedin }}" target="_blank" class="nes-btn is-warning">LinkedIn</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 98 Theme -->
+  <div data-theme-target="98">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Contact Information</div>
+      </div>
+      <div class="window-body">
+        <div class="field-row">
+          <label>Email:</label> <a href="mailto:{{ cv.contact.email }}">{{ cv.contact.email }}</a>
+        </div>
+        <div class="field-row">
+          <label>Phone:</label> {{ cv.contact.phone }}
+        </div>
+        <div class="field-row">
+          <label>Location:</label> {{ cv.contact.location.city }}, {{ cv.contact.location.province }}, {{ cv.contact.location.country }}
+        </div>
+        <div class="field-row">
+          <label>Work Region:</label> {{ cv.contact.location.workRegion }}
+        </div>
+
+        <fieldset>
+          <legend>Web Presence</legend>
+          <div class="contact-links-98">
+            <a href="{{ cv.contact.web.website }}" target="_blank">Website: {{ cv.contact.web.website }}</a>
+            <a href="{{ cv.contact.web.github }}" target="_blank">GitHub: {{ cv.contact.web.github }}</a>
+            <a href="{{ cv.contact.web.linkedin }}" target="_blank">LinkedIn: {{ cv.contact.web.linkedin }}</a>
+          </div>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</section>

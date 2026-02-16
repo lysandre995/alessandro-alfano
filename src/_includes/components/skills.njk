@@ -1,0 +1,143 @@
+<section id="skills" class="section skills-section">
+  <h2 class="section-title">Technical Skills</h2>
+
+  <!-- NES Theme -->
+  <div data-theme-target="nes">
+    <div class="skills-grid">
+      <!-- Architecture -->
+      <div class="nes-container is-dark">
+        <h3>{{ cv.technicalSkills.architecture.label }}</h3>
+        <ul class="nes-list is-disc">
+          {% for skill in cv.technicalSkills.architecture.skills %}
+          <li>{{ skill }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <!-- Languages -->
+      <div class="nes-container is-dark">
+        <h3>{{ cv.technicalSkills.languages.label }}</h3>
+        <h4>Primary:</h4>
+        <div class="skill-badges">
+          {% for lang in cv.technicalSkills.languages.primary %}
+          <span class="nes-badge"><span class="is-success">{{ lang }}</span></span>
+          {% endfor %}
+        </div>
+        <h4>Secondary:</h4>
+        <div class="skill-badges">
+          {% for lang in cv.technicalSkills.languages.secondary %}
+          <span class="nes-badge"><span class="is-warning">{{ lang }}</span></span>
+          {% endfor %}
+        </div>
+        <h4>Scripting:</h4>
+        <div class="skill-badges">
+          {% for lang in cv.technicalSkills.languages.scripting %}
+          <span class="nes-badge"><span class="is-primary">{{ lang }}</span></span>
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Frameworks -->
+      <div class="nes-container is-dark">
+        <h3>{{ cv.technicalSkills.frameworks.label }}</h3>
+        <h4>Backend:</h4>
+        <p>{{ cv.technicalSkills.frameworks.backend | join }}</p>
+        <h4>Frontend:</h4>
+        <p>{{ cv.technicalSkills.frameworks.frontend | join }}</p>
+        <h4>Game Development:</h4>
+        <p>{{ cv.technicalSkills.frameworks.gamedev | join }}</p>
+      </div>
+
+      <!-- Data & Databases -->
+      <div class="nes-container is-dark">
+        <h3>{{ cv.technicalSkills.data.label }}</h3>
+        <h4>Relational:</h4>
+        <p>{{ cv.technicalSkills.data.relational | join }}</p>
+        <h4>NoSQL:</h4>
+        <p>{{ cv.technicalSkills.data.nosql | join }}</p>
+        <h4>Cloud:</h4>
+        <p>{{ cv.technicalSkills.data.cloud | join }}</p>
+      </div>
+
+      <!-- Infrastructure -->
+      <div class="nes-container is-dark">
+        <h3>{{ cv.technicalSkills.infrastructure.label }}</h3>
+        <h4>Containerization:</h4>
+        <p>{{ cv.technicalSkills.infrastructure.containerization | join }}</p>
+        <h4>CI/CD:</h4>
+        <p>{{ cv.technicalSkills.infrastructure.cicd | join }}</p>
+        <h4>Cloud:</h4>
+        <p>{{ cv.technicalSkills.infrastructure.cloud | join }}</p>
+      </div>
+
+      <!-- Integration & Protocols -->
+      <div class="nes-container is-dark">
+        <h3>{{ cv.technicalSkills.integration.label }}</h3>
+        <h4>Protocols:</h4>
+        <p>{{ cv.technicalSkills.integration.protocols | join }}</p>
+        <h4>Patterns:</h4>
+        <p>{{ cv.technicalSkills.integration.patterns | join }}</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 98 Theme -->
+  <div data-theme-target="98">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Technical Skills Matrix</div>
+      </div>
+      <div class="window-body">
+        <ul class="tree-view">
+          <li>
+            <strong>{{ cv.technicalSkills.architecture.label }}</strong>
+            <ul>
+              {% for skill in cv.technicalSkills.architecture.skills %}
+              <li>{{ skill }}</li>
+              {% endfor %}
+            </ul>
+          </li>
+          <li>
+            <strong>{{ cv.technicalSkills.languages.label }}</strong>
+            <ul>
+              <li>Primary: {{ cv.technicalSkills.languages.primary | join }}</li>
+              <li>Secondary: {{ cv.technicalSkills.languages.secondary | join }}</li>
+              <li>Scripting: {{ cv.technicalSkills.languages.scripting | join }}</li>
+            </ul>
+          </li>
+          <li>
+            <strong>{{ cv.technicalSkills.frameworks.label }}</strong>
+            <ul>
+              <li>Backend: {{ cv.technicalSkills.frameworks.backend | join }}</li>
+              <li>Frontend: {{ cv.technicalSkills.frameworks.frontend | join }}</li>
+              <li>Game Dev: {{ cv.technicalSkills.frameworks.gamedev | join }}</li>
+            </ul>
+          </li>
+          <li>
+            <strong>{{ cv.technicalSkills.data.label }}</strong>
+            <ul>
+              <li>Relational: {{ cv.technicalSkills.data.relational | join }}</li>
+              <li>NoSQL: {{ cv.technicalSkills.data.nosql | join }}</li>
+              <li>Cloud: {{ cv.technicalSkills.data.cloud | join }}</li>
+            </ul>
+          </li>
+          <li>
+            <strong>{{ cv.technicalSkills.infrastructure.label }}</strong>
+            <ul>
+              <li>Containerization: {{ cv.technicalSkills.infrastructure.containerization | join }}</li>
+              <li>CI/CD: {{ cv.technicalSkills.infrastructure.cicd | join }}</li>
+              <li>Cloud: {{ cv.technicalSkills.infrastructure.cloud | join }}</li>
+            </ul>
+          </li>
+          <li>
+            <strong>{{ cv.technicalSkills.integration.label }}</strong>
+            <ul>
+              <li>Protocols: {{ cv.technicalSkills.integration.protocols | join }}</li>
+              <li>Patterns: {{ cv.technicalSkills.integration.patterns | join }}</li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+<section id="header" class="section header-section">
+  <!-- NES Theme -->
+  <div data-theme-target="nes">
+    <div class="nes-container is-dark with-title">
+      <p class="title"><i class="nes-icon trophy is-small"></i> {{ cv.identity.fullName }} <i class="nes-icon trophy is-small"></i></p>
+      <div class="header-content">
+        <img src="{{ cv.identity.profileImage }}" alt="{{ cv.identity.fullName }}"
+             class="profile-img" width="200" height="200">
+        <div class="header-text">
+          <h1>{{ cv.identity.headline }}</h1>
+          <p class="tagline">{{ cv.identity.tagline }}</p>
+          <div class="keywords">
+            {% for keyword in cv.identity.impressionKeywords %}
+            <span class="nes-badge">
+              <span class="is-success">{{ keyword }}</span>
+            </span>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 98 Theme -->
+  <div data-theme-target="98">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">{{ cv.identity.fullName }} - Professional CV</div>
+        <div class="title-bar-controls">
+          <button aria-label="Minimize"></button>
+          <button aria-label="Maximize"></button>
+          <button aria-label="Close"></button>
+        </div>
+      </div>
+      <div class="window-body">
+        <div class="header-content-98">
+          <img src="{{ cv.identity.profileImage }}" alt="{{ cv.identity.fullName }}"
+               class="profile-img" width="150" height="150">
+          <div class="header-text-98">
+            <h1>{{ cv.identity.fullName }}</h1>
+            <p><strong>{{ cv.identity.tagline }}</strong></p>
+            <p>{{ cv.identity.headline }}</p>
+            <div class="keywords-98">
+              {% for keyword in cv.identity.impressionKeywords %}
+              <span class="keyword-chip">{{ keyword }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,44 @@
+<section id="competencies" class="section competencies-section">
+  <h2 class="section-title">Core Competencies</h2>
+
+  <!-- NES Theme -->
+  <div data-theme-target="nes">
+    <div class="competencies-grid">
+      {% for comp in cv.coreCompetencies %}
+      <div class="nes-container is-dark with-title">
+        <p class="title">{{ comp.name }}</p>
+        <p class="competency-description">{{ comp.description }}</p>
+        <div class="competency-keywords">
+          {% for keyword in comp.keywords %}
+          <span class="nes-badge">
+            <span class="is-primary">{{ keyword }}</span>
+          </span>
+          {% endfor %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+  <!-- 98 Theme -->
+  <div data-theme-target="98">
+    {% for comp in cv.coreCompetencies %}
+    <div class="window competency-window">
+      <div class="title-bar">
+        <div class="title-bar-text">{{ comp.name }}</div>
+      </div>
+      <div class="window-body">
+        <p>{{ comp.description }}</p>
+        <fieldset>
+          <legend>Key Skills</legend>
+          <div class="field-row">
+            {% for keyword in comp.keywords %}
+            <span class="keyword-chip">{{ keyword }}</span>
+            {% endfor %}
+          </div>
+        </fieldset>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

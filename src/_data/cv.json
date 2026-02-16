@@ -1,0 +1,535 @@
+{
+  "identity": {
+    "fullName": "Alessandro Alfano",
+    "headline": "Engineer and systems thinker specializing in software architecture and complex system integration across distributed environments",
+    "tagline": "Software Architect · Systems Integrator · Ethical Technologist",
+    "profileImage": "/assets/images/profile-img.png",
+    "impressionKeywords": [
+      "Systems-oriented",
+      "Architectural thinker",
+      "Ethically focused",
+      "Technically excellent",
+      "Socially conscious"
+    ]
+  },
+  "contact": {
+    "email": "alfano.alessandro@outlook.com",
+    "phone": "+39 331 400 1156",
+    "location": {
+      "city": "Uggiate con Ronago",
+      "province": "CO",
+      "country": "Italy",
+      "workRegion": "Canton Ticino, Switzerland"
+    },
+    "web": {
+      "website": "https://alessandroalfano.com",
+      "github": "https://github.com/lysandre995",
+      "linkedin": "https://www.linkedin.com/in/alessandro-alfano-a03687198"
+    }
+  },
+  "summary": {
+    "short": "Software architect and systems integrator with expertise in distributed systems, complex integrations, and cloud-native architectures. Committed to technology that serves meaningful causes.",
+    "extended": "Engineer with a non-linear background spanning classical humanities, medicine, and computer engineering. Specializes in designing modular, evolvable systems and integrating heterogeneous technologies across industrial, IoT, and enterprise domains. Combines technical excellence with a strong ethical focus, seeking opportunities where technology contributes to social justice, environmental sustainability, and community empowerment."
+  },
+  "coreCompetencies": [
+    {
+      "id": "architecture",
+      "name": "Software Architecture & System Design",
+      "description": "Design of modular, evolvable, and maintainable systems. Definition of boundaries, responsibilities, data models, and long-term architectural strategies.",
+      "keywords": [
+        "System Design",
+        "Modular Architecture",
+        "Technical Strategy",
+        "Domain Modeling"
+      ]
+    },
+    {
+      "id": "integration",
+      "name": "Complex System Integration",
+      "description": "Integration of heterogeneous systems spanning automation, IoT, cloud services, and enterprise platforms. Expertise in communication protocols, data flows, and orchestration patterns.",
+      "keywords": [
+        "System Integration",
+        "Protocol Design",
+        "Data Orchestration",
+        "Heterogeneous Systems"
+      ]
+    },
+    {
+      "id": "distributed",
+      "name": "Distributed Systems & Cloud-Native Architectures",
+      "description": "Design and implementation of distributed systems, microservices-based solutions, containerized environments, and hybrid cloud/on-prem infrastructures.",
+      "keywords": [
+        "Microservices",
+        "Containerization",
+        "Cloud-Native",
+        "Hybrid Infrastructure"
+      ]
+    },
+    {
+      "id": "devops",
+      "name": "DevOps & Engineering Practices",
+      "description": "Advanced Git workflows, CI/CD pipeline design, containerization with Docker, and development infrastructure management. Emphasis on standardization and automation.",
+      "keywords": [
+        "CI/CD",
+        "GitOps",
+        "Containerization",
+        "Infrastructure as Code"
+      ]
+    },
+    {
+      "id": "research",
+      "name": "Applied Research & Technology Evaluation",
+      "description": "Evaluation and adoption of emerging technologies including time-series databases, integration patterns, and AI-assisted workflows. Translation of research into concrete engineering improvements.",
+      "keywords": [
+        "R&D",
+        "Technology Evaluation",
+        "Innovation",
+        "Continuous Improvement"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "id": "microtecna",
+      "role": "Application Engineer",
+      "company": "Microtecna Engineering",
+      "companyDescription": "Swiss engineering company specializing in high-tech industrial solutions, robotics, and automated systems",
+      "location": "Novazzano, Switzerland",
+      "period": {
+        "start": "2024-04",
+        "end": null,
+        "current": true
+      },
+      "responsibilities": [
+        "Design and development of software applications and integration layers for automated systems, including architecture definition, communication protocols, and data models",
+        "Contribution to the evolution of the company's application framework (.NET/WPF), focusing on modular architecture, extensibility, and web technology integration",
+        "R&D activities: evaluation of databases (including InfluxDB for time-series), CI/CD pipelines, and containerization practices",
+        "Management and evolution of GitLab infrastructure, including Package/Container Registry and advanced Git workflows with submodules",
+        "Internal reference for Linux environments, web technologies, and AI-assisted development workflows"
+      ],
+      "technologies": [
+        ".NET",
+        "WPF",
+        "Git",
+        "GitLab CI/CD",
+        "Docker",
+        "InfluxDB",
+        "Linux",
+        "gRPC",
+        "MQTT",
+        "Redis"
+      ],
+      "highlight": "Architect and internal technical reference for software applications, R&D, and development infrastructure evolution"
+    },
+    {
+      "id": "youpower",
+      "role": "Software Architect",
+      "company": "YouPower AG",
+      "companyDescription": "Swiss energy technology company focused on smart metering and energy community solutions",
+      "location": "Mezzovico, Switzerland",
+      "period": {
+        "start": "2023-10",
+        "end": "2024-04",
+        "current": false
+      },
+      "responsibilities": [
+        "Led the complete redesign and rewrite of a distributed system for electricity consumption/production data collection and processing",
+        "Coordinated development team and defined end-to-end system architecture",
+        "Designed meter acquisition layer using Modbus protocol and IoT router configuration (MikroTik RouterOS, WireGuard VPN)",
+        "Architected on-premise cloud infrastructure with VMs and Docker Swarm",
+        "Developed data visualization platform using Angular and NestJS",
+        "Implemented automated billing data generation and OCPP server for EV charging stations"
+      ],
+      "technologies": [
+        "Angular",
+        "NestJS",
+        "TypeScript",
+        "Docker Swarm",
+        "MongoDB",
+        "Redis",
+        "Modbus",
+        "RouterOS",
+        "WireGuard",
+        "OCPP"
+      ],
+      "highlight": "Full system architecture redesign for Swiss energy communities, from meter acquisition to billing automation"
+    },
+    {
+      "id": "forge",
+      "role": "Full Stack Developer",
+      "company": "Forge Srl",
+      "companyDescription": "Italian software house specializing in cloud-native solutions and enterprise integrations",
+      "location": "Varese, Italy",
+      "period": {
+        "start": "2022-02",
+        "end": "2023-09",
+        "current": false
+      },
+      "responsibilities": [
+        "Contributed to Leapp, an open-source application for secure cloud access management in DevOps environments",
+        "Designed and implemented AWS-based solutions using TypeScript, including e-commerce-to-ERP integration flows",
+        "Developed microservices-oriented document processing system (Spring Boot) for Italian electronic invoicing standards"
+      ],
+      "technologies": [
+        "TypeScript",
+        "AWS",
+        "Spring Boot",
+        "Java",
+        "Node.js"
+      ],
+      "highlight": "Open-source contribution to Leapp and cloud-native integration solutions for enterprise clients",
+      "openSource": {
+        "project": "Leapp",
+        "url": "https://github.com/Noovolari/leapp",
+        "description": "Secure cloud access management for DevOps environments"
+      }
+    },
+    {
+      "id": "arsinform",
+      "role": "Software Developer",
+      "company": "Arsinform Srl",
+      "companyDescription": "Italian company specializing in industrial automation and warehouse management software",
+      "location": "Milan, Italy",
+      "period": {
+        "start": "2021-05",
+        "end": "2022-01",
+        "current": false
+      },
+      "responsibilities": [
+        "Contributed to design and evolution of automation systems for automated warehouses",
+        "Integrated and optimized mission management system for a leading Italian food producer/distributor",
+        "Conducted operational research for technology stack modernization"
+      ],
+      "technologies": [
+        "Oracle",
+        "PL/SQL"
+      ],
+      "highlight": "Mission management system optimization for industrial logistics"
+    }
+  ],
+  "education": {
+    "formal": [
+      {
+        "id": "polimi",
+        "degree": "B.Sc. Computer Engineering",
+        "institution": "Politecnico di Milano",
+        "location": "Milan, Italy",
+        "period": {
+          "start": "2020",
+          "end": null,
+          "status": "In progress"
+        },
+        "url": "https://www.polimi.it"
+      },
+      {
+        "id": "medicina",
+        "degree": "Medicine and Surgery (partial)",
+        "institution": "University of Milan",
+        "location": "Milan, Italy",
+        "period": {
+          "start": "2014",
+          "end": "2020"
+        },
+        "note": "Redirected career path; developed analytical and problem-solving foundations",
+        "url": "https://www.unimi.it"
+      },
+      {
+        "id": "liceo",
+        "degree": "Classical Studies Diploma (Maturità Classica)",
+        "institution": "Liceo Classico Alessandro Volta",
+        "location": "Como, Italy",
+        "period": {
+          "start": "2009",
+          "end": "2014"
+        },
+        "note": "Humanistic foundation with Latin and Ancient Greek studies",
+        "url": "https://www.liceovoltacomo.edu.it"
+      }
+    ],
+    "narrative": "Interdisciplinary background spanning classical humanities, medicine, and computer engineering."
+  },
+  "certifications": [
+    {
+      "name": "AWS Solutions Architect – Associate (Training Course)",
+      "issuer": "beSharp Srl",
+      "date": "2022-11",
+      "skills": [
+        "AWS",
+        "Cloud Architecture"
+      ]
+    }
+  ],
+  "technicalSkills": {
+    "architecture": {
+      "label": "Architecture & Design",
+      "skills": [
+        "System Architecture",
+        "Microservices Design",
+        "Domain-Driven Design",
+        "Event-Driven Architecture",
+        "API Design"
+      ]
+    },
+    "languages": {
+      "label": "Languages",
+      "primary": [
+        "C#",
+        "TypeScript",
+        "JavaScript",
+        "Lua"
+      ],
+      "secondary": [
+        "Java",
+        "Python",
+        "Rust",
+        "SQL"
+      ],
+      "scripting": [
+        "Bash",
+        "PowerShell"
+      ]
+    },
+    "frameworks": {
+      "label": "Frameworks & Platforms",
+      "backend": [
+        ".NET",
+        "NestJS",
+        "Node.js",
+        "Spring Boot"
+      ],
+      "frontend": [
+        "Angular",
+        "WPF"
+      ],
+      "gamedev": [
+        "Love2D"
+      ]
+    },
+    "data": {
+      "label": "Data & Databases",
+      "relational": [
+        "PostgreSQL",
+        "MySQL",
+        "SQLite"
+      ],
+      "nosql": [
+        "MongoDB",
+        "Redis",
+        "InfluxDB"
+      ],
+      "cloud": [
+        "DynamoDB"
+      ]
+    },
+    "infrastructure": {
+      "label": "Infrastructure & DevOps",
+      "containerization": [
+        "Docker",
+        "Docker Swarm",
+        "Docker Compose"
+      ],
+      "cicd": [
+        "GitLab CI/CD",
+        "GitHub Actions"
+      ],
+      "versionControl": [
+        "Git",
+        "GitLab",
+        "GitHub"
+      ],
+      "cloud": [
+        "AWS"
+      ],
+      "os": [
+        "Linux (Debian-based)",
+        "Windows"
+      ]
+    },
+    "integration": {
+      "label": "Integration & Protocols",
+      "protocols": [
+        "gRPC",
+        "MQTT",
+        "REST",
+        "WebSocket",
+        "OPC UA",
+        "Modbus TCP"
+      ],
+      "patterns": [
+        "Message Queues",
+        "Event Streaming",
+        "Pub/Sub"
+      ]
+    }
+  },
+  "projects": {
+    "featured": [
+      {
+        "id": "alphamon",
+        "name": "Alphamon",
+        "description": "RPG game framework in Lua/Love2D featuring dependency injection architecture, multiplayer networking, and a complete battle system. Designed as an extensible starter kit for game developers.",
+        "type": "Game Framework",
+        "technologies": [
+          "Lua",
+          "Love2D"
+        ],
+        "status": "Active development (private repository)",
+        "features": [
+          "Dependency Injection",
+          "Multiplayer Networking",
+          "Battle System",
+          "Dialog Management"
+        ]
+      },
+      {
+        "id": "middleware",
+        "name": "Industrial Integration Middleware",
+        "description": "Framework/application template for multi-protocol integration in industrial environments. Supports OPC UA, Redis, REST, gRPC, and other protocols for heterogeneous system communication.",
+        "type": "Integration Framework",
+        "technologies": [
+          ".NET",
+          "OPC UA",
+          "Redis",
+          "gRPC",
+          "REST"
+        ],
+        "status": "Professional project (implementation proprietary)",
+        "context": "Microtecna Engineering"
+      },
+      {
+        "id": "aml",
+        "name": "AML (Alessandro's Music Language)",
+        "description": "Custom music notation system for chiptune and game music composition, with synthesis capabilities using ChucK.",
+        "type": "Creative Tool",
+        "technologies": [
+          "ChucK",
+          "Custom DSL"
+        ],
+        "status": "Experimental"
+      }
+    ],
+    "public": [
+      {
+        "id": "gathorapp",
+        "name": "GathorApp",
+        "description": "Social events platform with JWT authentication, real-time WebSocket chat, and role management. University project demonstrating full-stack development.",
+        "type": "Web Application",
+        "technologies": [
+          "Spring Boot",
+          "Angular",
+          "JWT",
+          "WebSocket"
+        ],
+        "url": "https://github.com/lysandre995/gathor-app",
+        "context": "University Project"
+      },
+      {
+        "id": "greenwheelers",
+        "name": "Green Wheelers",
+        "description": "University project focused on sustainable transportation solutions.",
+        "type": "Web Application",
+        "context": "University Project"
+      },
+      {
+        "id": "website-lorenzo",
+        "name": "Lorenzo Orsenigo Website",
+        "description": "Professional website for Italian contemporary music percussionist Lorenzo Orsenigo.",
+        "type": "Website",
+        "technologies": [
+          "Nunjucks",
+          "HTML",
+          "CSS",
+          "JavaScript"
+        ],
+        "url": "https://github.com/lysandre995/lorenzo-orsenigo-website"
+      },
+      {
+        "id": "website-personal",
+        "name": "Personal Portfolio",
+        "description": "Personal website and CV platform with JSON-based data backend.",
+        "type": "Website",
+        "technologies": [
+          "TypeScript"
+        ],
+        "urls": {
+          "live": "https://alessandroalfano.com",
+          "source": "https://github.com/lysandre995/alessandro-alfano",
+          "data": "https://github.com/lysandre995/alessandro-alfano-website-data"
+        }
+      }
+    ]
+  },
+  "openSource": [
+    {
+      "project": "Leapp",
+      "organization": "Noovolari",
+      "description": "Secure cloud access management for DevOps environments (AWS, Azure, GCP)",
+      "url": "https://github.com/Noovolari/leapp",
+      "contribution": "Feature development and contributions during Forge tenure"
+    }
+  ],
+  "languages": [
+    {
+      "name": "Italian",
+      "level": "Native"
+    },
+    {
+      "name": "English",
+      "level": "C1 (Professional)"
+    },
+    {
+      "name": "French",
+      "level": "A2 (Elementary)"
+    },
+    {
+      "name": "Latin",
+      "level": "Reading (Classical studies)"
+    },
+    {
+      "name": "Ancient Greek",
+      "level": "Reading (Classical studies)"
+    }
+  ],
+  "interests": {
+    "creative": [
+      {
+        "activity": "Music",
+        "details": "Singing and playing in a rock band; chiptune composition; music notation systems"
+      },
+      {
+        "activity": "Theater",
+        "details": "Acting and performance"
+      },
+      {
+        "activity": "Game Development",
+        "details": "Indie game development in Lua/Love2D"
+      }
+    ],
+    "physical": [
+      {
+        "activity": "Sailing",
+        "details": null
+      },
+      {
+        "activity": "Soccer Coaching",
+        "details": "Youth team coaching"
+      }
+    ],
+    "other": [
+      {
+        "activity": "Cooking",
+        "details": null
+      }
+    ]
+  },
+  "values": [
+    "Technology for social good",
+    "Open source and transparency",
+    "Environmental sustainability",
+    "Community empowerment",
+    "Ethical engineering practices"
+  ],
+  "legal": {
+    "gdpr": "I authorize the processing of personal data in accordance with Legislative Decree 101/2018 and GDPR (EU Regulation 2016/679)"
+  }
+}

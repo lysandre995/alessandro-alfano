@@ -1,0 +1,103 @@
+<section id="projects" class="section projects-section">
+  <h2 class="section-title">Projects</h2>
+
+  <h3 class="subsection-title">Featured Projects</h3>
+
+  <!-- NES Theme -->
+  <div data-theme-target="nes">
+    {% for project in cv.projects.featured %}
+    <div class="nes-container is-rounded">
+      <h4>{{ project.name }}</h4>
+      <p class="nes-text is-primary">{{ project.type }}</p>
+      <p>{{ project.description }}</p>
+
+      {% if project.features %}
+      <h5>Features:</h5>
+      <ul class="nes-list is-disc">
+        {% for feature in project.features %}
+        <li>{{ feature }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      <div class="project-meta">
+        <span class="nes-badge">
+          <span class="is-dark">{{ project.status }}</span>
+        </span>
+        {% for tech in project.technologies %}
+        <span class="nes-badge">
+          <span class="is-warning">{{ tech }}</span>
+        </span>
+        {% endfor %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <h3 class="subsection-title">Public Projects</h3>
+
+    {% for project in cv.projects.public %}
+    <div class="nes-container">
+      <h4>{{ project.name }}</h4>
+      <p class="nes-text is-primary">{{ project.type }}</p>
+      <p>{{ project.description }}</p>
+      {% if project.technologies %}
+      <p class="nes-text is-disabled">Tech: {{ project.technologies | join }}</p>
+      {% endif %}
+      {% if project.url %}
+      <a href="{{ project.url }}" target="_blank" class="nes-btn">View Project</a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- 98 Theme -->
+  <div data-theme-target="98">
+    {% for project in cv.projects.featured %}
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">{{ project.name }}</div>
+      </div>
+      <div class="window-body">
+        <p><strong>{{ project.type }}</strong></p>
+        <p>{{ project.description }}</p>
+
+        {% if project.features %}
+        <fieldset>
+          <legend>Features</legend>
+          <ul>
+            {% for feature in project.features %}
+            <li>{{ feature }}</li>
+            {% endfor %}
+          </ul>
+        </fieldset>
+        {% endif %}
+
+        <div class="status-bar">
+          <p class="status-bar-field">{{ project.status }}</p>
+          <p class="status-bar-field">Tech: {{ project.technologies | join }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+
+    <h3 class="subsection-title">Public Projects</h3>
+
+    {% for project in cv.projects.public %}
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">{{ project.name }}</div>
+      </div>
+      <div class="window-body">
+        <p><strong>{{ project.type }}</strong></p>
+        <p>{{ project.description }}</p>
+        {% if project.technologies %}
+        <p>Technologies: {{ project.technologies | join }}</p>
+        {% endif %}
+        {% if project.url %}
+        <button onclick="window.open('{{ project.url }}', '_blank')">View Project</button>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

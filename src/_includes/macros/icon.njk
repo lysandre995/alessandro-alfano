@@ -1,0 +1,4 @@
+{# Icon macro - includes SVG inline #}
+{% macro icon(name) %}
+<span class="icon icon-{{ name }}" aria-hidden="true">{% include "icons/" + name + ".svg" %}</span>
+{%- endmacro %}

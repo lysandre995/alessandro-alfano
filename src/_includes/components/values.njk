@@ -1,0 +1,32 @@
+<section id="values" class="section values-section">
+  <h2 class="section-title">Values</h2>
+
+  <!-- NES Theme -->
+  <div data-theme-target="nes">
+    <div class="nes-container is-rounded">
+      <div class="values-list">
+        {% for value in cv.values %}
+        <span class="nes-badge">
+          <span class="is-success">{{ value }}</span>
+        </span>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+
+  <!-- 98 Theme -->
+  <div data-theme-target="98">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Professional Values</div>
+      </div>
+      <div class="window-body">
+        <ul class="values-list-98">
+          {% for value in cv.values %}
+          <li>{{ value }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

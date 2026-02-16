@@ -1,0 +1,173 @@
+---
+permalink: /cv-classic.md
+---
+# {{ cv.identity.fullName }}
+
+**{{ cv.identity.tagline }}**
+
+{{ cv.summary.extended }}
+
+---
+
+## Contact
+
+- **Email:** {{ cv.contact.email }}
+- **Phone:** {{ cv.contact.phone }}
+- **Location:** {{ cv.contact.location.city }}, {{ cv.contact.location.province }}, {{ cv.contact.location.country }}
+- **Work Region:** {{ cv.contact.location.workRegion }}
+- **Website:** {{ cv.contact.web.website }}
+- **GitHub:** {{ cv.contact.web.github }}
+- **LinkedIn:** {{ cv.contact.web.linkedin }}
+
+---
+
+## Professional Experience
+
+{% for job in cv.experience %}
+### {{ job.role }} - {{ job.company }}
+*{{ job.period.start }} - {{ job.period.end or 'Present' }}* | {{ job.location }}
+
+{{ job.companyDescription }}
+
+**Key Responsibilities:**
+{% for resp in job.responsibilities %}
+- {{ resp }}
+{% endfor %}
+
+**Technologies:** {{ job.technologies | join }}
+
+**Highlight:** {{ job.highlight }}
+
+{% endfor %}
+
+---
+
+## Education
+
+{% for edu in cv.education.formal %}
+### {{ edu.degree }}
+**{{ edu.institution }}** - {{ edu.location }}
+*{{ edu.period.start }} - {{ edu.period.end or edu.period.status }}*
+
+{% if edu.note %}{{ edu.note }}{% endif %}
+{% endfor %}
+
+{{ cv.education.narrative }}
+
+---
+
+## Core Competencies
+
+{% for comp in cv.coreCompetencies %}
+### {{ comp.name }}
+{{ comp.description }}
+
+**Keywords:** {{ comp.keywords | join }}
+{% endfor %}
+
+---
+
+## Technical Skills
+
+**Architecture & Design:** {{ cv.technicalSkills.architecture.skills | join }}
+
+**Programming Languages:**
+- Primary: {{ cv.technicalSkills.languages.primary | join }}
+- Secondary: {{ cv.technicalSkills.languages.secondary | join }}
+- Scripting: {{ cv.technicalSkills.languages.scripting | join }}
+
+**Frameworks & Platforms:**
+- Backend: {{ cv.technicalSkills.frameworks.backend | join }}
+- Frontend: {{ cv.technicalSkills.frameworks.frontend | join }}
+- Game Development: {{ cv.technicalSkills.frameworks.gamedev | join }}
+
+**Data & Databases:**
+- Relational: {{ cv.technicalSkills.data.relational | join }}
+- NoSQL: {{ cv.technicalSkills.data.nosql | join }}
+- Cloud: {{ cv.technicalSkills.data.cloud | join }}
+
+**Infrastructure & DevOps:**
+- Containerization: {{ cv.technicalSkills.infrastructure.containerization | join }}
+- CI/CD: {{ cv.technicalSkills.infrastructure.cicd | join }}
+- Cloud: {{ cv.technicalSkills.infrastructure.cloud | join }}
+
+**Integration & Protocols:** {{ cv.technicalSkills.integration.protocols | join }}
+
+---
+
+## Certifications
+
+{% for cert in cv.certifications %}
+- **{{ cert.name }}** - {{ cert.issuer }} ({{ cert.date }})
+{% endfor %}
+
+---
+
+## Featured Projects
+
+{% for project in cv.projects.featured %}
+### {{ project.name }}
+*{{ project.type }}* - {{ project.status }}
+
+{{ project.description }}
+
+{% if project.features %}
+**Features:**
+{% for feature in project.features %}
+- {{ feature }}
+{% endfor %}
+{% endif %}
+
+**Technologies:** {{ project.technologies | join }}
+{% endfor %}
+
+---
+
+## Open Source Contributions
+
+{% for os in cv.openSource %}
+**{{ os.project }}** - {{ os.organization }}
+{{ os.description }}
+{{ os.url }}
+
+{{ os.contribution }}
+{% endfor %}
+
+---
+
+## Languages
+
+{% for lang in cv.languages %}
+- **{{ lang.name }}:** {{ lang.level }}
+{% endfor %}
+
+---
+
+## Interests
+
+**Creative:**
+{% for interest in cv.interests.creative %}
+- {{ interest.activity }}{% if interest.details %}: {{ interest.details }}{% endif %}
+{% endfor %}
+
+**Physical:**
+{% for interest in cv.interests.physical %}
+- {{ interest.activity }}{% if interest.details %}: {{ interest.details }}{% endif %}
+{% endfor %}
+
+**Other:**
+{% for interest in cv.interests.other %}
+- {{ interest.activity }}{% if interest.details %}: {{ interest.details }}{% endif %}
+{% endfor %}
+
+---
+
+## Values
+
+{% for value in cv.values %}
+- {{ value }}
+{% endfor %}
+
+---
+
+{{ cv.legal.gdpr }}

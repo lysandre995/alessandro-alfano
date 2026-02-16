@@ -1,0 +1,35 @@
+<section id="opensource" class="section opensource-section">
+  <h2 class="section-title">Open Source Contributions</h2>
+
+  <!-- NES Theme -->
+  <div data-theme-target="nes">
+    {% for os in cv.openSource %}
+    <div class="nes-container is-dark">
+      <h3>{{ os.project }}</h3>
+      <p class="nes-text is-primary">{{ os.organization }}</p>
+      <p>{{ os.description }}</p>
+      <p><em>{{ os.contribution }}</em></p>
+      <a href="{{ os.url }}" target="_blank" class="nes-btn is-primary">View Repository</a>
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- 98 Theme -->
+  <div data-theme-target="98">
+    {% for os in cv.openSource %}
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">{{ os.project }} - {{ os.organization }}</div>
+      </div>
+      <div class="window-body">
+        <p>{{ os.description }}</p>
+        <fieldset>
+          <legend>Contribution</legend>
+          <p>{{ os.contribution }}</p>
+        </fieldset>
+        <button onclick="window.open('{{ os.url }}', '_blank')">View Repository</button>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

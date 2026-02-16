@@ -1,0 +1,47 @@
+{% import "macros/icon.njk" as icons %}
+<section id="certifications" class="section certifications-section">
+  <h2 class="section-title">Certifications</h2>
+  <!-- NES Theme -->
+  <div data-theme-target="nes">
+    {% for cert in cv.certifications %}
+      <div class="nes-container is-rounded">
+        <h3>{{ cert.name }}</h3>
+        <p class="nes-text is-primary">
+          {{ icons.icon("bookmark") }}
+          {{ cert.issuer }}</p>
+        <p class="nes-text is-disabled">{{ icons.icon("calendar") }} {{ cert.date }}</p>
+        <div class="skill-badges">
+          {% for skill in cert.skills %}
+            <span class="nes-badge">
+              <span class="is-success">{{ skill }}</span>
+            </span>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+  <!-- 98 Theme -->
+  <div data-theme-target="98">
+    {% for cert in cv.certifications %}
+      <div class="window">
+        <div class="title-bar">
+          <div class="title-bar-text">{{ cert.name }}</div>
+        </div>
+        <div class="window-body">
+          <div class="field-row">
+            <label>Issuer:</label>
+            {{ cert.issuer }}
+          </div>
+          <div class="field-row">
+            <label>Date:</label>
+            {{ cert.date }}
+          </div>
+          <div class="field-row">
+            <label>Skills:</label>
+            {{ cert.skills | join }}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

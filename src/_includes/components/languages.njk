@@ -1,0 +1,30 @@
+<section id="languages" class="section languages-section">
+  <h2 class="section-title">Languages</h2>
+
+  <!-- NES Theme -->
+  <div data-theme-target="nes">
+    <div class="nes-container is-rounded">
+      <ul class="nes-list is-disc">
+        {% for lang in cv.languages %}
+        <li><strong>{{ lang.name }}:</strong> {{ lang.level }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <!-- 98 Theme -->
+  <div data-theme-target="98">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Language Skills</div>
+      </div>
+      <div class="window-body">
+        <ul class="tree-view">
+          {% for lang in cv.languages %}
+          <li><strong>{{ lang.name }}:</strong> {{ lang.level }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

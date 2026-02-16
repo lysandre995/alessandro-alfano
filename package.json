@@ -1,49 +1,25 @@
 {
-  "name": "alessandro-alfano-website",
-  "version": "0.0.0",
+  "name": "alessandro-alfano-cv",
+  "version": "2.0.0",
+  "description": "Alessandro Alfano's CV/Portfolio with dual retro themes",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "dev": "eleventy --serve --port=3000",
+    "build:site": "eleventy",
+    "build:pdf": "markdown-pdf _site/cv-classic.md -o _site/cv-classic.pdf && markdown-pdf _site/cv-europass.md -o _site/cv-europass.pdf",
+    "build": "npm run build:site && npm run build:pdf",
+    "clean": "rm -rf _site"
   },
-  "private": true,
   "dependencies": {
-    "@angular/animations": "^15.2.0",
-    "@angular/common": "^15.2.0",
-    "@angular/compiler": "^15.2.0",
-    "@angular/core": "^15.2.0",
-    "@angular/forms": "^15.2.0",
-    "@angular/platform-browser": "^15.2.0",
-    "@angular/platform-browser-dynamic": "^15.2.0",
-    "@angular/router": "^15.2.0",
-    "@fortawesome/angular-fontawesome": "0.12.1",
-    "@fortawesome/fontawesome-svg-core": "6.2.1",
-    "@fortawesome/free-solid-svg-icons": "6.2.1",
-    "axios": "^1.3.4",
-    "dom-to-image": "2.6.0",
-    "html2canvas": "^1.4.1",
-    "jspdf": "^2.5.1",
-    "ngx-print": "1.3.1",
-    "rxjs": "~7.8.0",
-    "tslib": "^2.3.0",
-    "zone.js": "~0.12.0"
+    "@11ty/eleventy": "^3.0.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.2.2",
-    "@angular/cli": "~15.2.2",
-    "@angular/compiler-cli": "^15.2.0",
-    "@types/dom-to-image": "^2.6.4",
-    "@types/jasmine": "~4.3.0",
-    "@types/node": "^18.15.5",
-    "angular-cli-ghpages": "^1.0.7",
-    "jasmine-core": "~4.5.0",
-    "karma": "~6.4.0",
-    "karma-chrome-launcher": "~3.1.0",
-    "karma-coverage": "~2.2.0",
-    "karma-jasmine": "~5.1.0",
-    "karma-jasmine-html-reporter": "~2.0.0",
-    "typescript": "~4.9.4"
-  }
+    "markdown-pdf": "^11.0.0"
+  },
+  "author": "Alessandro Alfano",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lysandre995/alessandro-alfano.git"
+  },
+  "homepage": "https://lysandre995.github.io/alessandro-alfano/"
 }

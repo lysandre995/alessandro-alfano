@@ -1,0 +1,84 @@
+<section id="interests" class="section interests-section">
+  <h2 class="section-title">Interests & Hobbies</h2>
+
+  <!-- NES Theme -->
+  <div data-theme-target="nes">
+    <div class="nes-container is-dark">
+      <h3>Creative Interests</h3>
+      <ul class="nes-list is-circle">
+        {% for interest in cv.interests.creative %}
+        <li>
+          <strong>{{ interest.activity }}</strong>
+          {% if interest.details %} - {{ interest.details }}{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+
+      <h3>Physical Activities</h3>
+      <ul class="nes-list is-circle">
+        {% for interest in cv.interests.physical %}
+        <li>
+          <strong>{{ interest.activity }}</strong>
+          {% if interest.details %} - {{ interest.details }}{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+
+      <h3>Other Interests</h3>
+      <ul class="nes-list is-circle">
+        {% for interest in cv.interests.other %}
+        <li>
+          <strong>{{ interest.activity }}</strong>
+          {% if interest.details %} - {{ interest.details }}{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <!-- 98 Theme -->
+  <div data-theme-target="98">
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">Interests & Hobbies</div>
+      </div>
+      <div class="window-body">
+        <fieldset>
+          <legend>Creative Interests</legend>
+          <ul>
+            {% for interest in cv.interests.creative %}
+            <li>
+              <strong>{{ interest.activity }}</strong>
+              {% if interest.details %} - {{ interest.details }}{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>Physical Activities</legend>
+          <ul>
+            {% for interest in cv.interests.physical %}
+            <li>
+              <strong>{{ interest.activity }}</strong>
+              {% if interest.details %} - {{ interest.details }}{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </fieldset>
+
+        <fieldset>
+          <legend>Other Interests</legend>
+          <ul>
+            {% for interest in cv.interests.other %}
+            <li>
+              <strong>{{ interest.activity }}</strong>
+              {% if interest.details %} - {{ interest.details }}{% endif %}
+            </li>
+            {% endfor %}
+          </ul>
+        </fieldset>
+      </div>
+    </div>
+  </div>
+</section>
