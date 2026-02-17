@@ -283,6 +283,14 @@ html[data-theme="98"] .win98-start-button:active {
   box-shadow: inset -1px -1px 0 #dfdfdf;
 }
 
+html[data-theme="98"] .win98-start-button .start-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.25rem;
+  image-rendering: pixelated;
+  vertical-align: middle;
+}
+
 /* Desktop icons container */
 html[data-theme="98"] .desktop-icons-container {
   position: fixed;
@@ -319,7 +327,17 @@ html[data-theme="98"] .desktop-icon:hover {
 html[data-theme="98"] .desktop-icon .icon-image {
   font-size: 2.5rem;
   margin-bottom: 0.25rem;
-  filter: drop-shadow(1px 1px 2px rgba(0,0,0,0.8));
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+html[data-theme="98"] .desktop-icon .icon-image img {
+  width: 48px;
+  height: 48px;
+  image-rendering: pixelated;
 }
 
 html[data-theme="98"] .desktop-icon .icon-label {
@@ -338,7 +356,8 @@ html[data-theme="98"] [data-clippy] {
   position: fixed;
   bottom: 50px;
   right: 20px;
-  font-size: 6rem;
+  width: 100px;
+  height: 140px;
   z-index: 998;
   animation: clippy-bounce 2s ease-in-out infinite;
   filter: drop-shadow(2px 2px 4px rgba(0,0,0,0.3));
@@ -346,6 +365,14 @@ html[data-theme="98"] [data-clippy] {
   pointer-events: auto;
   -webkit-user-select: none;
   user-select: none;
+}
+
+html[data-theme="98"] .clippy-assistant img,
+html[data-theme="98"] [data-clippy] img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  image-rendering: pixelated;
 }
 
 html[data-theme="98"] .clippy-assistant:hover,
@@ -412,6 +439,15 @@ html[data-theme="98"] .start-menu-items li span {
   left: 0.5rem;
 }
 
+html[data-theme="98"] .start-menu-items li .menu-icon {
+  position: absolute;
+  left: 0.5rem;
+  width: 16px;
+  height: 16px;
+  image-rendering: pixelated;
+  vertical-align: middle;
+}
+
 html[data-theme="98"] .start-menu-items li.separator {
   height: 2px;
   background: #808080;
@@ -444,6 +480,105 @@ html[data-theme="98"] .options-dialog .window {
 html[data-theme="98"] .clippy-btn {
   min-width: 80px;
   margin-right: 0.5rem;
+}
+
+/* Explorer Window Styling */
+html[data-theme="98"] .explorer-window-body {
+  padding: 0 !important;
+  min-height: 300px;
+}
+
+html[data-theme="98"] .explorer-toolbar {
+  background: #c0c0c0;
+  padding: 0.25rem;
+  border-bottom: 1px solid #808080;
+  display: flex;
+  gap: 0.25rem;
+}
+
+html[data-theme="98"] .explorer-toolbar .toolbar-btn {
+  background: transparent;
+  border: none;
+  padding: 0.25rem 0.5rem;
+  font-family: Tahoma, sans-serif;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+html[data-theme="98"] .explorer-toolbar .toolbar-btn:hover {
+  background: #000080;
+  color: #fff;
+}
+
+html[data-theme="98"] .explorer-address-bar {
+  background: #c0c0c0;
+  padding: 0.5rem;
+  border-bottom: 1px solid #808080;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+html[data-theme="98"] .explorer-address-bar label {
+  font-family: Tahoma, sans-serif;
+  font-size: 0.85rem;
+}
+
+html[data-theme="98"] .explorer-address-bar input {
+  flex: 1;
+  padding: 0.25rem;
+  border: 2px solid;
+  border-color: #808080 #ffffff #ffffff #808080;
+  background: #fff;
+  font-family: Tahoma, sans-serif;
+  font-size: 0.85rem;
+}
+
+html[data-theme="98"] .explorer-content {
+  background: #fff;
+  padding: 1rem;
+  min-height: 200px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 1.5rem;
+  align-content: start;
+}
+
+html[data-theme="98"] .explorer-content.empty-recycle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #808080;
+  font-size: 0.9rem;
+}
+
+html[data-theme="98"] .explorer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  padding: 0.5rem;
+  border: 1px solid transparent;
+}
+
+html[data-theme="98"] .explorer-item:hover {
+  background: #d4d4d4;
+}
+
+html[data-theme="98"] .explorer-item img {
+  width: 32px;
+  height: 32px;
+  margin-bottom: 0.25rem;
+  image-rendering: pixelated;
+}
+
+html[data-theme="98"] .explorer-item span {
+  font-family: Tahoma, sans-serif;
+  font-size: 0.75rem;
+  color: #000;
+  word-wrap: break-word;
+  max-width: 70px;
 }
 
 /* Tabs styling */
@@ -491,10 +626,24 @@ html[data-theme="98"] [data-theme-target="98"] {
   html[data-theme="98"] .cv-container {
     margin: 0.5rem;
     margin-bottom: 50px; /* Spazio per la start bar */
+    max-width: 100%;
+    overflow-x: hidden;
   }
 
   html[data-theme="98"] .window {
     max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  html[data-theme="98"] .window-body {
+    overflow-x: auto;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+  }
+
+  html[data-theme="98"] .window-body * {
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   html[data-theme="98"] .header-content-98 {
@@ -509,13 +658,6 @@ html[data-theme="98"] [data-theme-target="98"] {
   /* Hide desktop icons on mobile */
   html[data-theme="98"] .desktop-icons-container {
     display: none;
-  }
-
-  /* Smaller clippy on mobile */
-  html[data-theme="98"] body::after {
-    font-size: 2.5rem;
-    bottom: 45px;
-    right: 10px;
   }
 
   /* Smaller start button on mobile */
@@ -535,6 +677,35 @@ html[data-theme="98"] [data-theme-target="98"] {
   html[data-theme="98"] .options-dialog .window {
     width: 90vw !important;
     max-width: 350px;
+  }
+
+  /* Fix overflow issues on mobile */
+  html[data-theme="98"] .technologies,
+  html[data-theme="98"] .field-row {
+    flex-wrap: wrap;
+    overflow-x: visible;
+  }
+
+  html[data-theme="98"] ul,
+  html[data-theme="98"] ol {
+    padding-left: 1.5rem;
+    margin-right: 0;
+  }
+
+  html[data-theme="98"] pre,
+  html[data-theme="98"] code {
+    overflow-x: auto;
+    word-break: break-all;
+    white-space: pre-wrap;
+  }
+
+  /* Clippy sizing on mobile */
+  html[data-theme="98"] .clippy-assistant,
+  html[data-theme="98"] [data-clippy] {
+    width: 75px;
+    height: 105px;
+    bottom: 60px;
+    right: 10px;
   }
 }
 /* Updated: 1771264919 */

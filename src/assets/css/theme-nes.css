@@ -204,6 +204,11 @@ html[data-theme="nes"] .nes-list {
   margin: 1rem 0;
 }
 
+html[data-theme="nes"] .nes-list li {
+  margin: 0.75rem 0;
+  padding-left: 0.5rem;
+}
+
 html[data-theme="nes"] .technologies {
   margin-top: 1rem;
   font-size: 0.75rem;

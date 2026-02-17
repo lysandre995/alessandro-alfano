@@ -19,7 +19,7 @@
     const startButton = document.createElement('button');
     startButton.className = 'win98-start-button';
     startButton.setAttribute('data-start-button', '');
-    startButton.innerHTML = '⊞ Start';
+    startButton.innerHTML = '<img src="/assets/images/icons/start-here.png" alt="Start" class="start-icon"> Start';
     document.body.appendChild(startButton);
   };
 
@@ -29,20 +29,20 @@
     iconsContainer.className = 'desktop-icons-container';
     iconsContainer.innerHTML = `
       <div class="desktop-icon" data-action="my-computer">
-        <div class="icon-image">💻</div>
+        <div class="icon-image"><img src="/assets/images/icons/computer_win98.png" alt="My Computer"></div>
         <div class="icon-label">My Computer</div>
       </div>
       <div class="desktop-icon" data-action="documents">
-        <div class="icon-image">📁</div>
+        <div class="icon-image"><img src="/assets/images/icons/folder-documents.png" alt="My Documents"></div>
         <div class="icon-label">My Documents</div>
       </div>
       <div class="desktop-icon" data-action="recycle-bin">
-        <div class="icon-image">🗑️</div>
+        <div class="icon-image"><img src="/assets/images/icons/user-trash_win98.png" alt="Recycle Bin"></div>
         <div class="icon-label">Recycle Bin</div>
       </div>
       <div class="desktop-icon" data-action="options">
-        <div class="icon-image">⚙️</div>
-        <div class="icon-label">Options</div>
+        <div class="icon-image"><img src="/assets/images/icons/gnome-control-center.png" alt="Options"></div>
+        <div class="icon-label">Control Panel</div>
       </div>
     `;
 
@@ -87,6 +87,81 @@
 
     const windowEl = document.createElement('div');
     windowEl.className = 'explorer-window';
+
+    // Get appropriate content based on window type
+    let content = '';
+    if (title === 'My Computer') {
+      content = `
+        <div class="explorer-toolbar">
+          <button class="toolbar-btn">File</button>
+          <button class="toolbar-btn">Edit</button>
+          <button class="toolbar-btn">View</button>
+          <button class="toolbar-btn">Go</button>
+          <button class="toolbar-btn">Favorites</button>
+          <button class="toolbar-btn">Help</button>
+        </div>
+        <div class="explorer-address-bar">
+          <label>Address:</label>
+          <input type="text" value="My Computer" readonly>
+        </div>
+        <div class="explorer-content">
+          <div class="explorer-item">
+            <img src="/assets/images/icons/media-floppy.png" alt="3½ Floppy">
+            <span>3½ Floppy (A:)</span>
+          </div>
+          <div class="explorer-item">
+            <img src="/assets/images/icons/computer_win98.png" alt="Local Disk">
+            <span>(C:)</span>
+          </div>
+          <div class="explorer-item">
+            <img src="/assets/images/icons/media-optical.png" alt="CD-ROM">
+            <span>Compact Disc (D:)</span>
+          </div>
+          <div class="explorer-item">
+            <img src="/assets/images/icons/gnome-control-center.png" alt="Control Panel">
+            <span>Control Panel</span>
+          </div>
+        </div>
+      `;
+    } else if (title === 'My Documents') {
+      content = `
+        <div class="explorer-toolbar">
+          <button class="toolbar-btn">File</button>
+          <button class="toolbar-btn">Edit</button>
+          <button class="toolbar-btn">View</button>
+          <button class="toolbar-btn">Go</button>
+          <button class="toolbar-btn">Favorites</button>
+          <button class="toolbar-btn">Help</button>
+        </div>
+        <div class="explorer-address-bar">
+          <label>Address:</label>
+          <input type="text" value="C:\\My Documents" readonly>
+        </div>
+        <div class="explorer-content">
+          <div class="explorer-item">
+            <img src="/assets/images/icons/text-x-generic.png" alt="Text File">
+            <span>Alessandro's CV.txt</span>
+          </div>
+          <div class="explorer-item">
+            <img src="/assets/images/icons/folder.png" alt="Folder">
+            <span>Projects</span>
+          </div>
+        </div>
+      `;
+    } else if (title === 'Recycle Bin') {
+      content = `
+        <div class="explorer-toolbar">
+          <button class="toolbar-btn">File</button>
+          <button class="toolbar-btn">Edit</button>
+          <button class="toolbar-btn">View</button>
+          <button class="toolbar-btn">Help</button>
+        </div>
+        <div class="explorer-content empty-recycle">
+          <p>The Recycle Bin is empty.</p>
+        </div>
+      `;
+    }
+
     windowEl.innerHTML = `
       <div class="window">
         <div class="title-bar">
@@ -97,19 +172,12 @@
             <button aria-label="Close" class="close-btn"></button>
           </div>
         </div>
-        <div class="window-body">
-          <p>${message}</p>
-          <div class="tree-view">
-            <ul>
-              <li>📁 Desktop</li>
-              <li>📁 My Documents</li>
-              <li>💾 (C:) Local Disk</li>
-              <li>💿 (D:) CD-ROM</li>
-            </ul>
-          </div>
+        <div class="window-body explorer-window-body">
+          ${content}
         </div>
         <div class="status-bar">
           <p class="status-bar-field">${title}</p>
+          <p class="status-bar-field">${title === 'Recycle Bin' ? '0 objects' : 'My Computer'}</p>
         </div>
       </div>
     `;
@@ -131,14 +199,14 @@
         <span>Windows 98</span>
       </div>
       <ul class="start-menu-items">
-        <li><span>📂</span> Programs</li>
-        <li><span>📄</span> Documents</li>
-        <li><span>⚙️</span> Settings</li>
-        <li><span>🔍</span> Find</li>
+        <li><img src="/assets/images/icons/system-file-manager.png" alt="Programs" class="menu-icon"> Programs</li>
+        <li><img src="/assets/images/icons/folder-documents.png" alt="Documents" class="menu-icon"> Documents</li>
+        <li><img src="/assets/images/icons/preferences-desktop.png" alt="Settings" class="menu-icon"> Settings</li>
+        <li><img src="/assets/images/icons/system-search.png" alt="Find" class="menu-icon"> Find</li>
         <li><span>❓</span> Help</li>
-        <li><span>🏃</span> Run...</li>
+        <li><img src="/assets/images/icons/system-run.png" alt="Run" class="menu-icon"> Run...</li>
         <li class="separator"></li>
-        <li><span>🔌</span> Shut Down...</li>
+        <li><img src="/assets/images/icons/system-shutdown.png" alt="Shut Down" class="menu-icon"> Shut Down...</li>
       </ul>
     `;
 
@@ -160,11 +228,11 @@
   const createClippyDialog = () => {
     const clippy = document.querySelector('[data-clippy]');
     if (!clippy) {
-      // Create clippy element
+      // Create clippy element with the real Clippy!
       const clippyEl = document.createElement('div');
       clippyEl.setAttribute('data-clippy', '');
       clippyEl.className = 'clippy-assistant';
-      clippyEl.innerHTML = '📎';
+      clippyEl.innerHTML = `<img src="/assets/images/clippy.svg" alt="Clippy the Office Assistant" draggable="false">`;
       document.body.appendChild(clippyEl);
     }
 

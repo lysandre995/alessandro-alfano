@@ -118,9 +118,38 @@ MIT License - See [LICENSE](LICENSE) file for details.
 
 ## 🙏 Credits
 
-- NES.css by [nostalgic-css](https://github.com/nostalgic-css/NES.css)
-- 98.css by [jdan](https://github.com/jdan/98.css)
-- Pokémon sprites and assets are property of Nintendo/Game Freak
+### Frameworks & Libraries
+- **NES.css** by [nostalgic-css](https://github.com/nostalgic-css/NES.css) - 8-bit Nintendo-style CSS framework
+- **98.css** by [jdan](https://github.com/jdan/98.css) - Windows 98 style CSS framework
+- **Eleventy** by [11ty](https://www.11ty.dev/) - Static site generator
+
+### Assets & Icons
+
+#### Windows 98 Icons
+Windows 98-style icons sourced from the [Win98 Icon Theme](https://github.com/grassmunk/Win98SE) by grassmunk.
+- Licensed under GPL-3.0
+- Icons used: desktop icons (My Computer, folders, recycle bin), start menu icons, system icons
+- These icons are recreations/interpretations of the Windows 98 aesthetic and are not official Microsoft assets
+
+#### Clippy Assistant
+The Clippy (Office Assistant) graphic is based on Microsoft's original design:
+- Clippy is a trademark of Microsoft Corporation
+- The SVG implementation used in this project is a recreation for educational and portfolio purposes
+- Original Clippy character © Microsoft Corporation
+- This project is not affiliated with or endorsed by Microsoft
+
+#### Pokémon Assets
+- Pokémon sprites and character designs are property of Nintendo/Game Freak/The Pokémon Company
+- Used for educational and portfolio demonstration purposes only
+- This project is not affiliated with or endorsed by Nintendo
+
+### Fair Use Statement
+This portfolio website uses trademarked characters and design elements (Clippy, Pokémon, Windows 98 aesthetic) under fair use principles for:
+- Educational purposes (demonstrating web development skills)
+- Non-commercial personal portfolio use
+- Transformative use (interactive web implementation)
+
+All trademarks and copyrights belong to their respective owners. If you are a rights holder and have concerns about the use of any assets in this project, please contact me directly.
 
 ---
 
