@@ -206,7 +206,8 @@
         <li><span>❓</span> Help</li>
         <li><img src="/assets/images/icons/system-run.png" alt="Run" class="menu-icon"> Run...</li>
         <li class="separator"></li>
-        <li><img src="/assets/images/icons/system-shutdown.png" alt="Shut Down" class="menu-icon"> Shut Down...</li>
+        <li data-action="update"><img src="/assets/images/icons/system-software-update.png" alt="Windows Update" class="menu-icon"> Windows Update</li>
+        <li data-action="shutdown"><img src="/assets/images/icons/system-shutdown.png" alt="Shut Down" class="menu-icon"> Shut Down...</li>
       </ul>
     `;
 
@@ -221,6 +222,21 @@
         playStartSound();
       } else if (!e.target.closest('.start-menu')) {
         startMenu.classList.add('hidden');
+      }
+    });
+
+    // Menu items click handler
+    startMenu.addEventListener('click', (e) => {
+      const menuItem = e.target.closest('[data-action]');
+      if (menuItem) {
+        const action = menuItem.getAttribute('data-action');
+        startMenu.classList.add('hidden');
+
+        if (action === 'shutdown') {
+          showShutdownScreen();
+        } else if (action === 'update') {
+          showBSOD();
+        }
       }
     });
   };
@@ -412,6 +428,104 @@
     });
   };
 
+  const showShutdownScreen = () => {
+    const shutdownOverlay = document.createElement('div');
+    shutdownOverlay.className = 'shutdown-screen';
+    shutdownOverlay.innerHTML = `
+      <div class="dos-terminal">
+        <div class="dos-content"></div>
+      </div>
+    `;
+
+    document.body.appendChild(shutdownOverlay);
+
+    const dosContent = shutdownOverlay.querySelector('.dos-content');
+    const commands = [
+      { text: 'Microsoft(R) Windows 98', delay: 0 },
+      { text: '   (C)Copyright Microsoft Corp 1981-1999.', delay: 100 },
+      { text: '', delay: 200 },
+      { text: 'C:\\WINDOWS> shutdown.exe /s', delay: 800 },
+      { text: '', delay: 1000 },
+      { text: 'Closing all applications...', delay: 1200 },
+      { text: 'Saving user settings...', delay: 1800 },
+      { text: 'Flushing cache buffers...', delay: 2200 },
+      { text: 'Unmounting file systems...', delay: 2600 },
+      { text: '', delay: 3000 },
+      { text: 'WARNING: MSOFFICE.EXE was not properly closed!', delay: 3200 },
+      { text: 'ERROR: WINOLDAP.MOD has caused a General Protection Fault', delay: 3600 },
+      { text: 'ERROR: Illegal operation in module KERNEL32.DLL at 0157:BFF9DFFF', delay: 4000 },
+      { text: '', delay: 4400 },
+      { text: 'Ignoring errors... :/', delay: 4600 },
+      { text: 'Powering down system...', delay: 5200 },
+      { text: '', delay: 5600 },
+      { text: 'Phew! Close call there... system stabilized :)', delay: 6200 },
+      { text: 'Press any key to return to Windows...', delay: 6800 }
+    ];
+
+    let currentLine = 0;
+
+    const typeCommand = () => {
+      if (currentLine < commands.length) {
+        setTimeout(() => {
+          const line = document.createElement('div');
+          line.textContent = commands[currentLine].text;
+          dosContent.appendChild(line);
+          currentLine++;
+          typeCommand();
+        }, commands[currentLine].delay);
+      }
+    };
+
+    typeCommand();
+
+    // Close on any key press
+    const closeHandler = (e) => {
+      if (currentLine >= commands.length) {
+        shutdownOverlay.remove();
+        document.removeEventListener('keydown', closeHandler);
+        document.removeEventListener('click', closeHandler);
+      }
+    };
+
+    document.addEventListener('keydown', closeHandler);
+    document.addEventListener('click', closeHandler);
+  };
+
+  const showBSOD = () => {
+    const bsodOverlay = document.createElement('div');
+    bsodOverlay.className = 'bsod-screen';
+    bsodOverlay.innerHTML = `
+      <div class="bsod-content">
+        <h1>Windows</h1>
+        <p>A fatal exception 0E has occurred at 0028:C0011E36 in VXD VMM(01) +</p>
+        <p>00010E36. The current application will be terminated.</p>
+        <br>
+        <p>*  Press any key to terminate the current application.</p>
+        <p>*  Press CTRL+ALT+DEL again to restart your computer. You will</p>
+        <p>   lose any unsaved information in all applications.</p>
+        <br>
+        <p>Press any key to continue _</p>
+        <br>
+        <br>
+        <p style="text-align: center; margin-top: 2rem;">Phew! Disaster averted... Windows Update completed :)</p>
+        <p style="text-align: center; margin-top: 0.5rem;">(Click anywhere to return)</p>
+      </div>
+    `;
+
+    document.body.appendChild(bsodOverlay);
+
+    // Close on click
+    bsodOverlay.addEventListener('click', () => {
+      bsodOverlay.remove();
+    });
+
+    // Close on any key press
+    document.addEventListener('keydown', function closeHandler(e) {
+      bsodOverlay.remove();
+      document.removeEventListener('keydown', closeHandler);
+    });
+  };
+
   const playStartSound = () => {
     // Simple beep using Web Audio API
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -440,7 +554,7 @@
           setTimeout(init, 100);
         } else {
           // Clean up 98 elements when switching themes
-          document.querySelectorAll('.desktop-icons-container, .start-menu, .explorer-window, .clippy-dialog, .options-dialog, .win98-start-button, .clippy-assistant, [data-clippy]').forEach(el => el.remove());
+          document.querySelectorAll('.desktop-icons-container, .start-menu, .explorer-window, .clippy-dialog, .options-dialog, .win98-start-button, .clippy-assistant, [data-clippy], .shutdown-screen, .bsod-screen').forEach(el => el.remove());
         }
       }
     });
