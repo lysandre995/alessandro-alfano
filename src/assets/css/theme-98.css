@@ -201,6 +201,30 @@ html[data-theme="98"] .contact-links-98 a {
   text-decoration: underline;
 }
 
+html[data-theme="98"] .contact-qr-98 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+html[data-theme="98"] .contact-qr-98 .qr-item {
+  margin: 0;
+  text-align: center;
+}
+
+html[data-theme="98"] .contact-qr-98 .qr-item img {
+  background: #fff;
+  padding: 4px;
+  border: 1px solid #808080;
+  image-rendering: pixelated;
+}
+
+html[data-theme="98"] .contact-qr-98 .qr-item figcaption {
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+}
+
 /* Values list */
 html[data-theme="98"] .values-list-98 {
   list-style: disc;

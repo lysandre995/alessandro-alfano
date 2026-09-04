@@ -59,6 +59,49 @@ li {
   margin: 4pt 0;
 }
 
+/* Header block: name/tagline beside the photo (classic CV only) */
+.cv-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 10mm;
+  border-bottom: 3pt solid #2c3e50;
+  padding-bottom: 8pt;
+  margin-bottom: 10pt;
+}
+
+.cv-header h1 {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 4pt;
+}
+
+.cv-tagline {
+  margin: 0;
+  font-weight: bold;
+  color: #2c3e50;
+  text-align: left;
+}
+
+.cv-photo {
+  flex: 0 0 auto;
+  width: 30mm;
+  height: 30mm;
+  object-fit: cover;
+  border: 1pt solid #bdc3c7;
+}
+
+/* Signature at the foot of the classic CV */
+.cv-signature {
+  margin-top: 10pt;
+  text-align: right;
+  page-break-inside: avoid;
+}
+
+.cv-signature img {
+  height: 16mm;
+}
+
 /* Strong text */
 strong, b {
   font-weight: bold;

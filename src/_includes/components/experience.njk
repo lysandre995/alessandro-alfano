@@ -12,9 +12,9 @@
         <span class="nes-text is-disabled">{{ icons.icon("calendar") }} {{ job.period | formatPeriod }}</span>
       </div>
       <p class="company-description">{{ job.companyDescription }}</p>
-      <p class="highlight">{{ icons.icon("trophy") }} {{ job.highlight }}</p>
+      <p class="focus">{{ job.focus }}</p>
 
-      <h4>Key Responsibilities:</h4>
+      <h4>Responsibilities</h4>
       <ul class="nes-list is-disc">
         {% for resp in job.responsibilities %}
         <li>{{ resp }}</li>
@@ -51,8 +51,8 @@
         <p><em>{{ job.companyDescription }}</em></p>
 
         <fieldset>
-          <legend>Highlight</legend>
-          <p>{{ job.highlight }}</p>
+          <legend>Focus</legend>
+          <p>{{ job.focus }}</p>
         </fieldset>
 
         <fieldset>

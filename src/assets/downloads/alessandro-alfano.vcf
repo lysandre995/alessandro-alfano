@@ -1,0 +1,13 @@
+BEGIN:VCARD
+VERSION:3.0
+N:Alfano;Alessandro;;;
+FN:Alessandro Alfano
+TITLE:Software Engineer · Systems Integration
+EMAIL;TYPE=INTERNET:alfano.alessandro@outlook.com
+TEL;TYPE=CELL:+39 331 400 1156
+ADR;TYPE=HOME:;;;Uggiate con Ronago;CO;;Italy
+URL:https://alessandroalfano.com
+X-SOCIALPROFILE;TYPE=github:https://github.com/lysandre995
+X-SOCIALPROFILE;TYPE=linkedin:https://www.linkedin.com/in/alessandro-alfano-a03687198
+NOTE:Software engineer. Backend, integrations, and cloud-native infrastructure.
+END:VCARD

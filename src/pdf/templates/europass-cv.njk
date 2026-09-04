@@ -30,7 +30,7 @@ permalink: /pdf-temp/cv-europass.md
 - {{ resp }}
 {% endfor %}
 
-**Key achievement:** {{ job.highlight }}
+**Focus:** {{ job.focus }}
 
 **Name and address of employer:** {{ job.company }}, {{ job.location }}
 
@@ -49,13 +49,13 @@ permalink: /pdf-temp/cv-europass.md
 
 **Title of qualification awarded:** {{ edu.degree }}
 
-**Principal subjects/occupational skills covered:** {{ edu.note or 'Computer Engineering, Software Development, System Architecture' }}
+{% if edu.subjects %}**Principal subjects/occupational skills covered:** {{ edu.subjects }}{% endif %}
+
+{% if edu.note %}**Notes:** {{ edu.note }}{% endif %}
 
 **Name and type of organization providing education and training:** {{ edu.institution }}, {{ edu.location }}
 
 {% endfor %}
-
-**Educational background:** {{ cv.education.narrative }}
 
 ---
 
@@ -96,7 +96,7 @@ Italian
 
 ## ADDITIONAL INFORMATION
 
-### Certifications
+### Courses
 
 {% for cert in cv.certifications %}
 - **{{ cert.name }}** ({{ cert.issuer }}, {{ cert.date }}){% if cert.credentialId %} - Credential ID: {{ cert.credentialId }}{% endif %}
@@ -109,11 +109,29 @@ Italian
   {{ os.url }}
 {% endfor %}
 
-### Professional Projects
+### Projects
 
 {% for project in cv.projects.featured %}
 - **{{ project.name }}** ({{ project.type }}): {{ project.description }}
   *Technologies:* {{ project.technologies | join }}
+{% endfor %}
+
+**University projects:**
+{% for project in cv.projects.university %}
+- **{{ project.name }}** ({{ project.type }}): {{ project.description }}
+  {{ project.url }}
+{% endfor %}
+
+**Other public projects:**
+{% for project in cv.projects.public %}
+- **{{ project.name }}** ({{ project.type }}): {{ project.description }}
+  {{ project.url or project.urls.live or project.urls.source }}
+{% endfor %}
+
+### Theatre
+
+{% for item in cv.theater %}
+- **{{ item.role }}** - {{ item.organization }} ({{ item.period | formatPeriod }}): {{ item.description }}
 {% endfor %}
 
 ### Interests and Activities

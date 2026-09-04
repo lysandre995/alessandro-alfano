@@ -1,0 +1,375 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Alessandro Alfano",
+    "label": "Software Engineer · Systems Integration",
+    "email": "alfano.alessandro@outlook.com",
+    "phone": "+39 331 400 1156",
+    "url": "https://alessandroalfano.com",
+    "summary": "Integration between systems, and the distributed services around them. Diverse background. Interested in open source, and in who the software ends up serving.",
+    "location": {
+      "city": "Uggiate con Ronago",
+      "region": "CO",
+      "countryCode": "IT"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "lysandre995",
+        "url": "https://github.com/lysandre995"
+      },
+      {
+        "network": "LinkedIn",
+        "username": "alessandro-alfano",
+        "url": "https://www.linkedin.com/in/alessandro-alfano-a03687198"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Microtecna Engineering",
+      "position": "Application Engineer",
+      "location": "Novazzano, Switzerland",
+      "description": "Swiss engineering company specializing in high-tech industrial solutions, robotics, and automated systems",
+      "startDate": "2024-04",
+      "summary": "Reference point for application software, R&D, and development infrastructure",
+      "highlights": [
+        "Design and development of software applications and integration layers for automated systems, including architecture definition, communication protocols, and data models",
+        "Contribution to the evolution of the company's application framework (.NET/WPF), focusing on modular architecture, extensibility, and web technology integration",
+        "R&D activities: evaluation and adoption of new data storage technologies, CI/CD and containerization practices",
+        "Management and evolution of company's private git infrastructure, introduction to private Package/Container Registry and advanced Git automatic workflows",
+        "Internal reference for Linux environments, web technologies, and AI-assisted development workflows"
+      ]
+    },
+    {
+      "name": "YouPower AG",
+      "position": "Software Architect",
+      "location": "Mezzovico, Switzerland",
+      "description": "Swiss energy technology company focused on smart metering and energy community solutions",
+      "startDate": "2023-10",
+      "endDate": "2024-04",
+      "summary": "Architecture redesign of the data platform, from meter acquisition to billing",
+      "highlights": [
+        "Led the complete redesign and rewrite of a distributed system for electricity consumption/production data collection and processing",
+        "Coordinated development team and defined end-to-end system architecture",
+        "Designed meter acquisition layer using Modbus protocol and IoT router configuration",
+        "Architected on-premise cloud infrastructure with VMs and Docker Swarm",
+        "Developed data visualization platform using Angular and NestJS",
+        "Implemented automated billing data generation and OCPP server for EV charging stations"
+      ]
+    },
+    {
+      "name": "Forge Srl",
+      "position": "Full Stack Developer",
+      "location": "Varese, Italy",
+      "description": "Italian software house specializing in cloud-native solutions and enterprise integrations",
+      "startDate": "2022-02",
+      "endDate": "2023-09",
+      "summary": "Open-source work on Leapp and cloud integrations for enterprise clients",
+      "highlights": [
+        "Contributed to Leapp, an open-source application for secure cloud access management in DevOps environments",
+        "Designed and implemented AWS-based solutions using TypeScript, including e-commerce-to-ERP integration flows",
+        "Developed microservices-oriented document processing system (Spring Boot) for Italian electronic invoicing standards"
+      ]
+    },
+    {
+      "name": "Arsinform Srl",
+      "position": "Software Developer",
+      "location": "Milan, Italy",
+      "description": "Italian company specializing in industrial automation and warehouse management software",
+      "startDate": "2021-05",
+      "endDate": "2022-01",
+      "summary": "Mission management system for automated warehouses",
+      "highlights": [
+        "Contributed to design and evolution of automation systems for automated warehouses",
+        "Integrated and optimized mission management system for a leading Italian food producer/distributor",
+        "Conducted operational research for technology stack modernization"
+      ]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "Compagnia Teatrale Trebisonda",
+      "position": "Communication with Teatro Sociale di Como",
+      "startDate": "2026",
+      "summary": "Contact person for the company's relationship with Teatro Sociale di Como. Current work covers workshops and \"Theatron - una sfida a teatro\", part of the Stravolta campaign of the 2026/2027 season."
+    },
+    {
+      "organization": "Compagnia Teatrale Trebisonda",
+      "position": "Waterfall, by Ilaria Casati",
+      "url": "https://waterfall-enterprise.org",
+      "startDate": "2025",
+      "endDate": "2026",
+      "summary": "Production staged in four performances between 2025 and 2026. The site of the fictional company featured in the play is listed under Projects."
+    },
+    {
+      "organization": "Mumble Teatro",
+      "position": "Workshop activities",
+      "startDate": "2021",
+      "endDate": "2025",
+      "summary": "Workshop cycles with the association, each ending in a final production; four in total."
+    }
+  ],
+  "education": [
+    {
+      "institution": "Politecnico di Milano",
+      "url": "https://www.polimi.it",
+      "area": "B.Sc. Computer Engineering",
+      "studyType": "Degree",
+      "startDate": "2020",
+      "endDate": "2026",
+      "courses": [
+        "Computer engineering, software development, system architecture"
+      ]
+    },
+    {
+      "institution": "University of Milan",
+      "url": "https://www.unimi.it",
+      "area": "Medicine and Surgery (partial)",
+      "studyType": "Degree",
+      "startDate": "2014",
+      "endDate": "2020",
+      "courses": [
+        "Medicine and surgery"
+      ]
+    },
+    {
+      "institution": "Liceo Classico Alessandro Volta",
+      "url": "https://www.liceovoltacomo.edu.it",
+      "area": "Classical Studies Diploma (Maturità Classica)",
+      "studyType": "Degree",
+      "startDate": "2009",
+      "endDate": "2014",
+      "courses": [
+        "Latin, Ancient Greek, classical literature, philosophy"
+      ]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "AWS Solutions Architect – Associate (Training Course)",
+      "date": "2022-11",
+      "issuer": "beSharp Srl"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Architecture & Design",
+      "keywords": [
+        "System Architecture",
+        "Microservices Design",
+        "Domain-Driven Design",
+        "Event-Driven Architecture",
+        "API Design"
+      ]
+    },
+    {
+      "name": "Languages",
+      "keywords": [
+        "TypeScript",
+        "JavaScript",
+        "Java",
+        "C#",
+        "Lua",
+        "Python",
+        "Rust",
+        "SQL",
+        "Bash",
+        "PowerShell"
+      ]
+    },
+    {
+      "name": "Frameworks & Platforms",
+      "keywords": [
+        ".NET",
+        "NestJS",
+        "Node.js",
+        "Spring Boot",
+        "Angular",
+        "Blazor",
+        "Vue",
+        "WPF",
+        "Love2D"
+      ]
+    },
+    {
+      "name": "Data & Databases",
+      "keywords": [
+        "PostgreSQL",
+        "MySQL",
+        "SQLite",
+        "MongoDB",
+        "Redis",
+        "InfluxDB",
+        "DynamoDB"
+      ]
+    },
+    {
+      "name": "Infrastructure & DevOps",
+      "keywords": [
+        "Docker",
+        "Docker Swarm",
+        "Docker Compose",
+        "Kubernetes",
+        "GitLab CI/CD",
+        "GitHub Actions",
+        "Git",
+        "GitLab",
+        "GitHub",
+        "SVN",
+        "AWS",
+        "Linux",
+        "Windows"
+      ]
+    },
+    {
+      "name": "Integration & Protocols",
+      "keywords": [
+        "gRPC",
+        "MQTT",
+        "REST",
+        "WebSocket",
+        "OPC UA",
+        "Modbus TCP",
+        "Signal R",
+        "Message Queues",
+        "Event Streaming",
+        "Pub/Sub"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Italian",
+      "fluency": "Native"
+    },
+    {
+      "language": "English",
+      "fluency": "C1 (Professional)"
+    },
+    {
+      "language": "French",
+      "fluency": "A2 (Elementary)"
+    },
+    {
+      "language": "Latin",
+      "fluency": "Reading"
+    },
+    {
+      "language": "Ancient Greek",
+      "fluency": "Reading"
+    }
+  ],
+  "projects": [
+    {
+      "name": "Alphamon",
+      "description": "Collectible monster-fighting RPG starter kit in Lua/Love2D, with dependency injection, TCP multiplayer, a battle system, and dialog management. MIT-licensed, to be released as open source.",
+      "keywords": [
+        "Lua",
+        "Love2D"
+      ]
+    },
+    {
+      "name": "Multi-Protocol Integration Framework",
+      "description": "Framework/application template for multi-protocol integration across distributed, heterogeneous environments. Supports OPC UA, Redis, REST, gRPC, and other protocols for heterogeneous system communication.",
+      "keywords": [
+        ".NET",
+        "OPC UA",
+        "Redis",
+        "gRPC",
+        "REST"
+      ]
+    },
+    {
+      "name": "AML (Alessandro's Music Language)",
+      "description": "Text-based music notation system for chiptune composition, with a Game Boy Color-style synthesis framework built on ChucK and Python CLI utilities.",
+      "keywords": [
+        "ChucK",
+        "Custom DSL"
+      ],
+      "url": "https://github.com/lysandre995/aml-chiptune"
+    },
+    {
+      "name": "GathorApp",
+      "description": "Outing and event management system with geolocation, JWT authentication, real-time chat, and vouchers.",
+      "keywords": [
+        "Spring Boot",
+        "Angular",
+        "JWT",
+        "WebSocket"
+      ],
+      "url": "https://github.com/lysandre995/gathorapp"
+    },
+    {
+      "name": "Green Wheels",
+      "description": "Car pooling application, split into frontend, backend, and shared-core repositories.",
+      "keywords": [
+        "TypeScript",
+        "Angular",
+        "Node.js"
+      ],
+      "url": "https://github.com/lysandre995/green-wheels"
+    },
+    {
+      "name": "Lorenzo Orsenigo Website",
+      "description": "Website for percussionist Lorenzo Orsenigo.",
+      "keywords": [
+        "Nunjucks",
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
+      "url": "https://github.com/lysandre995/lorenzo-orsenigo-website"
+    },
+    {
+      "name": "Personal Portfolio",
+      "description": "Personal website and CV platform with JSON-based data backend.",
+      "keywords": [
+        "TypeScript"
+      ],
+      "url": "https://github.com/lysandre995/alessandro-alfano"
+    },
+    {
+      "name": "Waterfall Enterprise",
+      "description": "Site of the fictional company that appears in the theatre production Waterfall, written and directed by Ilaria Casati.",
+      "keywords": [
+        "Eleventy",
+        "Nunjucks",
+        "Bootstrap",
+        "JavaScript"
+      ],
+      "url": "https://github.com/lysandre995/waterfall-enterprise"
+    }
+  ],
+  "interests": [
+    {
+      "name": "Music",
+      "keywords": [
+        "Singing and playing in a rock band; chiptune composition; music notation systems"
+      ]
+    },
+    {
+      "name": "Game Development",
+      "keywords": [
+        "Indie game development in Lua/Love2D"
+      ]
+    },
+    {
+      "name": "Sailing"
+    },
+    {
+      "name": "Soccer Coaching",
+      "keywords": [
+        "Youth team coaching"
+      ]
+    },
+    {
+      "name": "Cooking"
+    }
+  ],
+  "meta": {
+    "canonical": "https://alessandroalfano.com",
+    "version": "v1.0.0",
+    "lastModified": "2026-09-04"
+  }
+}

@@ -3,8 +3,9 @@
   "version": "2.0.0",
   "description": "Alessandro Alfano's CV/Portfolio with dual retro themes",
   "scripts": {
-    "dev": "eleventy --serve --port=3000",
-    "build": "eleventy",
+    "dev": "npm run assets && eleventy --serve --port=3000",
+    "build": "npm run assets && eleventy",
+    "assets": "node scripts/generate-assets.js",
     "clean": "rm -rf _site",
     "pdf": "node scripts/generate-pdf.js"
   },
@@ -12,7 +13,8 @@
     "@11ty/eleventy": "^3.0.0"
   },
   "devDependencies": {
-    "md-to-pdf": "^5.2.4"
+    "md-to-pdf": "^5.2.4",
+    "qrcode": "^1.5.4"
   },
   "author": "Alessandro Alfano",
   "license": "MIT",

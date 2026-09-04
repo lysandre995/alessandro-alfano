@@ -17,6 +17,17 @@
         <a href="{{ cv.contact.web.github }}" target="_blank" class="nes-btn is-success">GitHub</a>
         <a href="{{ cv.contact.web.linkedin }}" target="_blank" class="nes-btn is-warning">LinkedIn</a>
       </div>
+
+      <div class="contact-qr">
+        <figure class="qr-item">
+          <img src="/assets/downloads/qr-website.svg" alt="QR code linking to {{ cv.contact.web.website }}" width="120" height="120">
+          <figcaption>Website</figcaption>
+        </figure>
+        <figure class="qr-item">
+          <img src="/assets/downloads/qr-vcard.svg" alt="QR code containing contact vCard" width="120" height="120">
+          <figcaption>Save contact (vCard)</figcaption>
+        </figure>
+      </div>
     </div>
   </div>
 
@@ -46,6 +57,20 @@
             <a href="{{ cv.contact.web.website }}" target="_blank">Website: {{ cv.contact.web.website }}</a>
             <a href="{{ cv.contact.web.github }}" target="_blank">GitHub: {{ cv.contact.web.github }}</a>
             <a href="{{ cv.contact.web.linkedin }}" target="_blank">LinkedIn: {{ cv.contact.web.linkedin }}</a>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Scan</legend>
+          <div class="contact-qr-98">
+            <figure class="qr-item">
+              <img src="/assets/downloads/qr-website.svg" alt="QR code linking to {{ cv.contact.web.website }}" width="110" height="110">
+              <figcaption>Website</figcaption>
+            </figure>
+            <figure class="qr-item">
+              <img src="/assets/downloads/qr-vcard.svg" alt="QR code containing contact vCard" width="110" height="110">
+              <figcaption>Save contact (vCard)</figcaption>
+            </figure>
           </div>
         </fieldset>
       </div>

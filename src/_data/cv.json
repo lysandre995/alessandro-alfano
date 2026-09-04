@@ -1,15 +1,12 @@
 {
   "identity": {
     "fullName": "Alessandro Alfano",
-    "headline": "Engineer and systems thinker specializing in software architecture and complex system integration across distributed environments",
-    "tagline": "Software Architect · Systems Integrator · Ethical Technologist",
+    "headline": "Software engineer working on systems integration and distributed services.",
+    "tagline": "Software Engineer · Systems Integration",
     "profileImage": "/assets/images/profile-img.png",
     "impressionKeywords": [
-      "Systems-oriented",
-      "Architectural thinker",
-      "Ethically focused",
-      "Technically excellent",
-      "Socially conscious"
+      "Systems integration",
+      "Open-source contributor"
     ]
   },
   "contact": {
@@ -28,14 +25,14 @@
     }
   },
   "summary": {
-    "short": "Software architect and systems integrator with expertise in distributed systems, complex integrations, and cloud-native architectures. Committed to technology that serves meaningful causes.",
-    "extended": "Engineer with a non-linear background spanning classical humanities, medicine, and computer engineering. Specializes in designing modular, evolvable systems and integrating heterogeneous technologies across industrial, IoT, and enterprise domains. Combines technical excellence with a strong ethical focus, seeking opportunities where technology contributes to social justice, environmental sustainability, and community empowerment."
+    "short": "Software engineer. Backend, integrations, and cloud-native infrastructure.",
+    "extended": "Integration between systems, and the distributed services around them. Diverse background. Interested in open source, and in who the software ends up serving."
   },
   "coreCompetencies": [
     {
       "id": "architecture",
       "name": "Software Architecture & System Design",
-      "description": "Design of modular, evolvable, and maintainable systems. Definition of boundaries, responsibilities, data models, and long-term architectural strategies.",
+      "description": "Design of modular systems: boundaries, responsibilities, data models, and how a system is meant to change over time.",
       "keywords": [
         "System Design",
         "Modular Architecture",
@@ -46,7 +43,7 @@
     {
       "id": "integration",
       "name": "Complex System Integration",
-      "description": "Integration of heterogeneous systems spanning automation, IoT, cloud services, and enterprise platforms. Expertise in communication protocols, data flows, and orchestration patterns.",
+      "description": "Integration of systems across automation, IoT, cloud services, and enterprise platforms: communication protocols, data flows, and orchestration patterns.",
       "keywords": [
         "System Integration",
         "Protocol Design",
@@ -57,7 +54,7 @@
     {
       "id": "distributed",
       "name": "Distributed Systems & Cloud-Native Architectures",
-      "description": "Design and implementation of distributed systems, microservices-based solutions, containerized environments, and hybrid cloud/on-prem infrastructures.",
+      "description": "Distributed systems, microservices, containerized environments, and hybrid cloud/on-prem infrastructures.",
       "keywords": [
         "Microservices",
         "Containerization",
@@ -68,7 +65,7 @@
     {
       "id": "devops",
       "name": "DevOps & Engineering Practices",
-      "description": "Advanced Git workflows, CI/CD pipeline design, containerization with Docker, and development infrastructure management. Emphasis on standardization and automation.",
+      "description": "Git workflows, CI/CD pipelines, containerization with Docker, and development infrastructure management.",
       "keywords": [
         "CI/CD",
         "GitOps",
@@ -79,7 +76,7 @@
     {
       "id": "research",
       "name": "Applied Research & Technology Evaluation",
-      "description": "Evaluation and adoption of emerging technologies including time-series databases, integration patterns, and AI-assisted workflows. Translation of research into concrete engineering improvements.",
+      "description": "Evaluation and adoption of new technologies, integration patterns, and AI-assisted workflows.",
       "keywords": [
         "R&D",
         "Technology Evaluation",
@@ -103,13 +100,11 @@
       "responsibilities": [
         "Design and development of software applications and integration layers for automated systems, including architecture definition, communication protocols, and data models",
         "Contribution to the evolution of the company's application framework (.NET/WPF), focusing on modular architecture, extensibility, and web technology integration",
-        "R&D activities: evaluation of databases (including InfluxDB for time-series), CI/CD pipelines, and containerization practices",
-        "Management and evolution of GitLab infrastructure, including Package/Container Registry and advanced Git workflows with submodules",
+        "R&D activities: evaluation and adoption of new data storage technologies, CI/CD and containerization practices",
+        "Management and evolution of company's private git infrastructure, introduction to private Package/Container Registry and advanced Git automatic workflows",
         "Internal reference for Linux environments, web technologies, and AI-assisted development workflows"
       ],
       "technologies": [
-        ".NET",
-        "WPF",
         "Git",
         "GitLab CI/CD",
         "Docker",
@@ -117,9 +112,11 @@
         "Linux",
         "gRPC",
         "MQTT",
-        "Redis"
+        "Redis",
+        ".NET",
+        "WPF"
       ],
-      "highlight": "Architect and internal technical reference for software applications, R&D, and development infrastructure evolution"
+      "focus": "Reference point for application software, R&D, and development infrastructure"
     },
     {
       "id": "youpower",
@@ -135,7 +132,7 @@
       "responsibilities": [
         "Led the complete redesign and rewrite of a distributed system for electricity consumption/production data collection and processing",
         "Coordinated development team and defined end-to-end system architecture",
-        "Designed meter acquisition layer using Modbus protocol and IoT router configuration (MikroTik RouterOS, WireGuard VPN)",
+        "Designed meter acquisition layer using Modbus protocol and IoT router configuration",
         "Architected on-premise cloud infrastructure with VMs and Docker Swarm",
         "Developed data visualization platform using Angular and NestJS",
         "Implemented automated billing data generation and OCPP server for EV charging stations"
@@ -152,7 +149,7 @@
         "WireGuard",
         "OCPP"
       ],
-      "highlight": "Full system architecture redesign for Swiss energy communities, from meter acquisition to billing automation"
+      "focus": "Architecture redesign of the data platform, from meter acquisition to billing"
     },
     {
       "id": "forge",
@@ -177,12 +174,12 @@
         "Java",
         "Node.js"
       ],
-      "highlight": "Open-source contribution to Leapp and cloud-native integration solutions for enterprise clients",
       "openSource": {
         "project": "Leapp",
         "url": "https://github.com/Noovolari/leapp",
         "description": "Secure cloud access management for DevOps environments"
-      }
+      },
+      "focus": "Open-source work on Leapp and cloud integrations for enterprise clients"
     },
     {
       "id": "arsinform",
@@ -204,7 +201,7 @@
         "Oracle",
         "PL/SQL"
       ],
-      "highlight": "Mission management system optimization for industrial logistics"
+      "focus": "Mission management system for automated warehouses"
     }
   ],
   "education": {
@@ -216,10 +213,10 @@
         "location": "Milan, Italy",
         "period": {
           "start": "2020",
-          "end": null,
-          "status": "In progress"
+          "end": "2026"
         },
-        "url": "https://www.polimi.it"
+        "url": "https://www.polimi.it",
+        "subjects": "Computer engineering, software development, system architecture"
       },
       {
         "id": "medicina",
@@ -230,8 +227,8 @@
           "start": "2014",
           "end": "2020"
         },
-        "note": "Redirected career path; developed analytical and problem-solving foundations",
-        "url": "https://www.unimi.it"
+        "url": "https://www.unimi.it",
+        "subjects": "Medicine and surgery"
       },
       {
         "id": "liceo",
@@ -242,11 +239,10 @@
           "start": "2009",
           "end": "2014"
         },
-        "note": "Humanistic foundation with Latin and Ancient Greek studies",
-        "url": "https://www.liceovoltacomo.edu.it"
+        "url": "https://www.liceovoltacomo.edu.it",
+        "subjects": "Latin, Ancient Greek, classical literature, philosophy"
       }
-    ],
-    "narrative": "Interdisciplinary background spanning classical humanities, medicine, and computer engineering."
+    ]
   },
   "certifications": [
     {
@@ -273,13 +269,13 @@
     "languages": {
       "label": "Languages",
       "primary": [
-        "C#",
         "TypeScript",
         "JavaScript",
+        "Java",
+        "C#",
         "Lua"
       ],
       "secondary": [
-        "Java",
         "Python",
         "Rust",
         "SQL"
@@ -299,6 +295,10 @@
       ],
       "frontend": [
         "Angular",
+        "Blazor",
+        "Vue"
+      ],
+      "desktop": [
         "WPF"
       ],
       "gamedev": [
@@ -326,7 +326,8 @@
       "containerization": [
         "Docker",
         "Docker Swarm",
-        "Docker Compose"
+        "Docker Compose",
+        "Kubernetes"
       ],
       "cicd": [
         "GitLab CI/CD",
@@ -335,13 +336,14 @@
       "versionControl": [
         "Git",
         "GitLab",
-        "GitHub"
+        "GitHub",
+        "SVN"
       ],
       "cloud": [
         "AWS"
       ],
       "os": [
-        "Linux (Debian-based)",
+        "Linux",
         "Windows"
       ]
     },
@@ -353,7 +355,8 @@
         "REST",
         "WebSocket",
         "OPC UA",
-        "Modbus TCP"
+        "Modbus TCP",
+        "Signal R"
       ],
       "patterns": [
         "Message Queues",
@@ -367,13 +370,13 @@
       {
         "id": "alphamon",
         "name": "Alphamon",
-        "description": "RPG game framework in Lua/Love2D featuring dependency injection architecture, multiplayer networking, and a complete battle system. Designed as an extensible starter kit for game developers.",
+        "description": "Collectible monster-fighting RPG starter kit in Lua/Love2D, with dependency injection, TCP multiplayer, a battle system, and dialog management. MIT-licensed, to be released as open source.",
         "type": "Game Framework",
         "technologies": [
           "Lua",
           "Love2D"
         ],
-        "status": "Active development (private repository)",
+        "status": "In progress · repository currently private",
         "features": [
           "Dependency Injection",
           "Multiplayer Networking",
@@ -383,8 +386,8 @@
       },
       {
         "id": "middleware",
-        "name": "Industrial Integration Middleware",
-        "description": "Framework/application template for multi-protocol integration in industrial environments. Supports OPC UA, Redis, REST, gRPC, and other protocols for heterogeneous system communication.",
+        "name": "Multi-Protocol Integration Framework",
+        "description": "Framework/application template for multi-protocol integration across distributed, heterogeneous environments. Supports OPC UA, Redis, REST, gRPC, and other protocols for heterogeneous system communication.",
         "type": "Integration Framework",
         "technologies": [
           ".NET",
@@ -399,41 +402,21 @@
       {
         "id": "aml",
         "name": "AML (Alessandro's Music Language)",
-        "description": "Custom music notation system for chiptune and game music composition, with synthesis capabilities using ChucK.",
+        "description": "Text-based music notation system for chiptune composition, with a Game Boy Color-style synthesis framework built on ChucK and Python CLI utilities.",
         "type": "Creative Tool",
         "technologies": [
           "ChucK",
           "Custom DSL"
         ],
-        "status": "Experimental"
+        "status": "Public repository · MIT",
+        "url": "https://github.com/lysandre995/aml-chiptune"
       }
     ],
     "public": [
       {
-        "id": "gathorapp",
-        "name": "GathorApp",
-        "description": "Social events platform with JWT authentication, real-time WebSocket chat, and role management. University project demonstrating full-stack development.",
-        "type": "Web Application",
-        "technologies": [
-          "Spring Boot",
-          "Angular",
-          "JWT",
-          "WebSocket"
-        ],
-        "url": "https://github.com/lysandre995/gathor-app",
-        "context": "University Project"
-      },
-      {
-        "id": "greenwheelers",
-        "name": "Green Wheelers",
-        "description": "University project focused on sustainable transportation solutions.",
-        "type": "Web Application",
-        "context": "University Project"
-      },
-      {
         "id": "website-lorenzo",
         "name": "Lorenzo Orsenigo Website",
-        "description": "Professional website for Italian contemporary music percussionist Lorenzo Orsenigo.",
+        "description": "Website for percussionist Lorenzo Orsenigo.",
         "type": "Website",
         "technologies": [
           "Nunjucks",
@@ -456,6 +439,49 @@
           "source": "https://github.com/lysandre995/alessandro-alfano",
           "data": "https://github.com/lysandre995/alessandro-alfano-website-data"
         }
+      },
+      {
+        "id": "waterfall-enterprise",
+        "name": "Waterfall Enterprise",
+        "description": "Site of the fictional company that appears in the theatre production Waterfall, written and directed by Ilaria Casati.",
+        "type": "Website",
+        "technologies": [
+          "Eleventy",
+          "Nunjucks",
+          "Bootstrap",
+          "JavaScript"
+        ],
+        "urls": {
+          "live": "https://waterfall-enterprise.org",
+          "source": "https://github.com/lysandre995/waterfall-enterprise"
+        }
+      }
+    ],
+    "university": [
+      {
+        "id": "gathorapp",
+        "name": "GathorApp",
+        "description": "Outing and event management system with geolocation, JWT authentication, real-time chat, and vouchers.",
+        "type": "Web Application",
+        "technologies": [
+          "Spring Boot",
+          "Angular",
+          "JWT",
+          "WebSocket"
+        ],
+        "url": "https://github.com/lysandre995/gathorapp"
+      },
+      {
+        "id": "greenwheelers",
+        "name": "Green Wheels",
+        "description": "Car pooling application, split into frontend, backend, and shared-core repositories.",
+        "type": "Web Application",
+        "url": "https://github.com/lysandre995/green-wheels",
+        "technologies": [
+          "TypeScript",
+          "Angular",
+          "Node.js"
+        ]
       }
     ]
   },
@@ -465,7 +491,7 @@
       "organization": "Noovolari",
       "description": "Secure cloud access management for DevOps environments (AWS, Azure, GCP)",
       "url": "https://github.com/Noovolari/leapp",
-      "contribution": "Feature development and contributions during Forge tenure"
+      "contribution": "Feature development during the Forge period (2022-2023)"
     }
   ],
   "languages": [
@@ -483,11 +509,11 @@
     },
     {
       "name": "Latin",
-      "level": "Reading (Classical studies)"
+      "level": "Reading"
     },
     {
       "name": "Ancient Greek",
-      "level": "Reading (Classical studies)"
+      "level": "Reading"
     }
   ],
   "interests": {
@@ -495,10 +521,6 @@
       {
         "activity": "Music",
         "details": "Singing and playing in a rock band; chiptune composition; music notation systems"
-      },
-      {
-        "activity": "Theater",
-        "details": "Acting and performance"
       },
       {
         "activity": "Game Development",
@@ -522,6 +544,40 @@
       }
     ]
   },
+  "theater": [
+    {
+      "id": "trebisonda-communication",
+      "organization": "Compagnia Teatrale Trebisonda",
+      "role": "Communication with Teatro Sociale di Como",
+      "period": {
+        "start": "2026",
+        "end": null,
+        "current": true
+      },
+      "description": "Contact person for the company's relationship with Teatro Sociale di Como. Current work covers workshops and \"Theatron - una sfida a teatro\", part of the Stravolta campaign of the 2026/2027 season."
+    },
+    {
+      "id": "waterfall",
+      "organization": "Compagnia Teatrale Trebisonda",
+      "role": "Waterfall, by Ilaria Casati",
+      "period": {
+        "start": "2025",
+        "end": "2026"
+      },
+      "description": "Production staged in four performances between 2025 and 2026. The site of the fictional company featured in the play is listed under Projects.",
+      "url": "https://waterfall-enterprise.org"
+    },
+    {
+      "id": "mumble",
+      "organization": "Mumble Teatro",
+      "role": "Workshop activities",
+      "period": {
+        "start": "2021",
+        "end": "2025"
+      },
+      "description": "Workshop cycles with the association, each ending in a final production; four in total."
+    }
+  ],
   "values": [
     "Technology for social good",
     "Open source and transparency",

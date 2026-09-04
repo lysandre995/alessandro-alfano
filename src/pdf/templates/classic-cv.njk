@@ -1,9 +1,13 @@
 ---
 permalink: /pdf-temp/cv-classic.md
 ---
-# {{ cv.identity.fullName }}
-
-**{{ cv.identity.tagline }}**
+<div class="cv-header">
+  <div class="cv-header-text">
+    <h1>{{ cv.identity.fullName }}</h1>
+    <p class="cv-tagline">{{ cv.identity.tagline }}</p>
+  </div>
+  <img class="cv-photo" src="{{ '/assets/images/profile-img.png' | dataUri }}" alt="{{ cv.identity.fullName }}">
+</div>
 
 {{ cv.summary.extended }}
 
@@ -29,14 +33,14 @@ permalink: /pdf-temp/cv-classic.md
 
 {{ job.companyDescription }}
 
-**Key Responsibilities:**
+**Responsibilities:**
 {% for resp in job.responsibilities %}
 - {{ resp }}
 {% endfor %}
 
 **Technologies:** {{ job.technologies | join }}
 
-**Key Achievement:** {{ job.highlight }}
+**Focus:** {{ job.focus }}
 
 {% endfor %}
 
@@ -49,10 +53,9 @@ permalink: /pdf-temp/cv-classic.md
 **{{ edu.institution }}** - {{ edu.location }}
 *{{ edu.period.start }} - {{ edu.period.end or edu.period.status }}*
 
+{% if edu.subjects %}{{ edu.subjects }}{% endif %}
 {% if edu.note %}{{ edu.note }}{% endif %}
 {% endfor %}
-
-{{ cv.education.narrative }}
 
 ---
 
@@ -85,7 +88,7 @@ permalink: /pdf-temp/cv-classic.md
 ### Databases
 - **Relational:** {{ cv.technicalSkills.data.relational | join }}
 - **NoSQL:** {{ cv.technicalSkills.data.nosql | join }}
-- **Messaging:** {{ cv.technicalSkills.data.messaging | join }}
+- **Cloud:** {{ cv.technicalSkills.data.cloud | join }}
 
 ### Infrastructure & DevOps
 - **Containerization:** {{ cv.technicalSkills.infrastructure.containerization | join }}
@@ -97,7 +100,7 @@ permalink: /pdf-temp/cv-classic.md
 
 ---
 
-## Certifications
+## Courses
 
 {% for cert in cv.certifications %}
 - **{{ cert.name }}** - {{ cert.issuer }} ({{ cert.date }})
@@ -106,10 +109,12 @@ permalink: /pdf-temp/cv-classic.md
 
 ---
 
-## Featured Projects
+## Projects
+
+### Main Projects
 
 {% for project in cv.projects.featured %}
-### {{ project.name }}
+#### {{ project.name }}
 *{{ project.type }}* - {{ project.status }}
 
 {{ project.description }}
@@ -122,6 +127,34 @@ permalink: /pdf-temp/cv-classic.md
 {% endif %}
 
 **Technologies:** {{ project.technologies | join }}
+
+{% endfor %}
+
+### University Projects
+
+{% for project in cv.projects.university %}
+#### {{ project.name }}
+*{{ project.type }}*
+
+{{ project.description }}
+
+{% if project.technologies %}**Technologies:** {{ project.technologies | join }}{% endif %}
+
+{{ project.url }}
+
+{% endfor %}
+
+### Other Public Projects
+
+{% for project in cv.projects.public %}
+#### {{ project.name }}
+*{{ project.type }}*
+
+{{ project.description }}
+
+{% if project.technologies %}**Technologies:** {{ project.technologies | join }}{% endif %}
+
+{{ project.url or project.urls.live or project.urls.source }}
 
 {% endfor %}
 
@@ -165,7 +198,21 @@ permalink: /pdf-temp/cv-classic.md
 
 ---
 
-## Professional Values
+## Theatre
+
+{% for item in cv.theater %}
+### {{ item.role }}
+**{{ item.organization }}** | *{{ item.period | formatPeriod }}*
+
+{{ item.description }}
+{% if item.url %}
+{{ item.url }}
+{% endif %}
+{% endfor %}
+
+---
+
+## Values
 
 {% for value in cv.values %}
 - {{ value }}
@@ -174,3 +221,7 @@ permalink: /pdf-temp/cv-classic.md
 ---
 
 {{ cv.legal.gdpr }}
+
+<div class="cv-signature">
+  <img src="{{ '/assets/images/signature.png' | dataUri }}" alt="Signature">
+</div>

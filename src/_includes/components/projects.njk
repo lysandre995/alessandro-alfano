@@ -1,11 +1,12 @@
 <section id="projects" class="section projects-section">
   <h2 class="section-title">Projects</h2>
 
-  <h3 class="subsection-title">Featured Projects</h3>
-
   <!-- NES Theme -->
   <div data-theme-target="nes">
+    <h3 class="subsection-title">Main Projects</h3>
+
     {% for project in cv.projects.featured %}
+    {% set link = project.url or project.urls.live or project.urls.source %}
     <div class="nes-container is-rounded">
       <h4>{{ project.name }}</h4>
       <p class="nes-text is-primary">{{ project.type }}</p>
@@ -30,12 +31,17 @@
         </span>
         {% endfor %}
       </div>
+
+      {% if link %}
+      <a href="{{ link }}" target="_blank" rel="noopener" class="nes-btn">Open</a>
+      {% endif %}
     </div>
     {% endfor %}
 
-    <h3 class="subsection-title">Public Projects</h3>
+    <h3 class="subsection-title">University Projects</h3>
 
-    {% for project in cv.projects.public %}
+    {% for project in cv.projects.university %}
+    {% set link = project.url or project.urls.live or project.urls.source %}
     <div class="nes-container">
       <h4>{{ project.name }}</h4>
       <p class="nes-text is-primary">{{ project.type }}</p>
@@ -43,8 +49,25 @@
       {% if project.technologies %}
       <p class="nes-text is-disabled">Tech: {{ project.technologies | join }}</p>
       {% endif %}
-      {% if project.url %}
-      <a href="{{ project.url }}" target="_blank" class="nes-btn">View Project</a>
+      {% if link %}
+      <a href="{{ link }}" target="_blank" rel="noopener" class="nes-btn">Open</a>
+      {% endif %}
+    </div>
+    {% endfor %}
+
+    <h3 class="subsection-title">Other Public Projects</h3>
+
+    {% for project in cv.projects.public %}
+    {% set link = project.url or project.urls.live or project.urls.source %}
+    <div class="nes-container">
+      <h4>{{ project.name }}</h4>
+      <p class="nes-text is-primary">{{ project.type }}</p>
+      <p>{{ project.description }}</p>
+      {% if project.technologies %}
+      <p class="nes-text is-disabled">Tech: {{ project.technologies | join }}</p>
+      {% endif %}
+      {% if link %}
+      <a href="{{ link }}" target="_blank" rel="noopener" class="nes-btn">Open</a>
       {% endif %}
     </div>
     {% endfor %}
@@ -52,7 +75,10 @@
 
   <!-- 98 Theme -->
   <div data-theme-target="98">
+    <h3 class="subsection-title">Main Projects</h3>
+
     {% for project in cv.projects.featured %}
+    {% set link = project.url or project.urls.live or project.urls.source %}
     <div class="window">
       <div class="title-bar">
         <div class="title-bar-text">{{ project.name }}</div>
@@ -72,6 +98,10 @@
         </fieldset>
         {% endif %}
 
+        {% if link %}
+        <button onclick="window.open('{{ link }}', '_blank')">Open</button>
+        {% endif %}
+
         <div class="status-bar">
           <p class="status-bar-field">{{ project.status }}</p>
           <p class="status-bar-field">Tech: {{ project.technologies | join }}</p>
@@ -80,9 +110,10 @@
     </div>
     {% endfor %}
 
-    <h3 class="subsection-title">Public Projects</h3>
+    <h3 class="subsection-title">University Projects</h3>
 
-    {% for project in cv.projects.public %}
+    {% for project in cv.projects.university %}
+    {% set link = project.url or project.urls.live or project.urls.source %}
     <div class="window">
       <div class="title-bar">
         <div class="title-bar-text">{{ project.name }}</div>
@@ -93,8 +124,29 @@
         {% if project.technologies %}
         <p>Technologies: {{ project.technologies | join }}</p>
         {% endif %}
-        {% if project.url %}
-        <button onclick="window.open('{{ project.url }}', '_blank')">View Project</button>
+        {% if link %}
+        <button onclick="window.open('{{ link }}', '_blank')">Open</button>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+
+    <h3 class="subsection-title">Other Public Projects</h3>
+
+    {% for project in cv.projects.public %}
+    {% set link = project.url or project.urls.live or project.urls.source %}
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">{{ project.name }}</div>
+      </div>
+      <div class="window-body">
+        <p><strong>{{ project.type }}</strong></p>
+        <p>{{ project.description }}</p>
+        {% if project.technologies %}
+        <p>Technologies: {{ project.technologies | join }}</p>
+        {% endif %}
+        {% if link %}
+        <button onclick="window.open('{{ link }}', '_blank')">Open</button>
         {% endif %}
       </div>
     </div>

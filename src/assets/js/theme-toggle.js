@@ -4,7 +4,7 @@
   const STORAGE_KEY = 'cv-theme';
 
   const initTheme = () => {
-    const savedTheme = localStorage.getItem(STORAGE_KEY) || 'nes';
+    const savedTheme = localStorage.getItem(STORAGE_KEY) || '98';
     document.documentElement.setAttribute('data-theme', savedTheme);
   };
 

@@ -12,6 +12,7 @@ A retro-styled interactive CV/portfolio built with [Eleventy (11ty)](https://www
   - Win98 theme: Desktop icons, Start menu, Clippy assistant
 - **Single-Page Layout**: All CV sections in one seamless scrollable page
 - **PDF Export**: Download CV in Classic or Europass format
+- **Interchangeable formats**: Downloadable vCard (`.vcf`), machine-readable [JSON Resume](https://jsonresume.org/), and build-time QR codes (website + vCard)
 - **Fully Responsive**: Mobile-friendly design
 - **Static Site**: Fast, lightweight, GitHub Pages ready
 
@@ -93,6 +94,7 @@ Edit component includes in `src/index.njk` and create/modify components in `src/
 
 - `npm run dev` - Start development server with live reload
 - `npm run build` - Build production site to `_site/`
+- `npm run assets` - Regenerate vCard, JSON Resume, and QR codes from `cv.json` into `src/assets/downloads/` (also runs automatically before `dev`/`build`)
 - `npm run clean` - Delete `_site/` directory
 
 ## 📦 Dependencies

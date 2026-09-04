@@ -191,10 +191,9 @@ html[data-theme="nes"] .company-description {
   line-height: 1.5;
 }
 
-html[data-theme="nes"] .highlight {
+html[data-theme="nes"] .focus {
   font-size: 0.85rem;
   margin: 0.5rem 0;
-  color: #d97706;
   line-height: 1.5;
 }
 
@@ -287,6 +286,31 @@ html[data-theme="nes"] .contact-links {
   flex-wrap: wrap;
   gap: 1rem;
   margin-top: 1rem;
+}
+
+/* Contact QR codes */
+html[data-theme="nes"] .contact-qr {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+html[data-theme="nes"] .qr-item {
+  margin: 0;
+  text-align: center;
+}
+
+html[data-theme="nes"] .qr-item img {
+  background: #fff;
+  padding: 6px;
+  border: 4px solid #fff;
+  image-rendering: pixelated;
+}
+
+html[data-theme="nes"] .qr-item figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.65rem;
 }
 
 /* Values */

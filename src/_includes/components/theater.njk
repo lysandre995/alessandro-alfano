@@ -1,0 +1,40 @@
+{% import "macros/icon.njk" as icons %}
+<section id="theater" class="section theater-section">
+  <h2 class="section-title">Theatre</h2>
+
+  <!-- NES Theme -->
+  <div data-theme-target="nes">
+    {% for item in cv.theater %}
+    <div class="nes-container">
+      <h4>{{ item.role }}</h4>
+      <p class="nes-text is-primary">{{ item.organization }}</p>
+      <p class="nes-text is-disabled">{{ icons.icon("calendar") }} {{ item.period | formatPeriod }}</p>
+      <p>{{ item.description }}</p>
+      {% if item.url %}
+      <a href="{{ item.url }}" target="_blank" rel="noopener" class="nes-btn">Open</a>
+      {% endif %}
+    </div>
+    {% endfor %}
+  </div>
+
+  <!-- 98 Theme -->
+  <div data-theme-target="98">
+    {% for item in cv.theater %}
+    <div class="window">
+      <div class="title-bar">
+        <div class="title-bar-text">{{ item.organization }}</div>
+      </div>
+      <div class="window-body">
+        <h3>{{ item.role }}</h3>
+        <div class="field-row">
+          <label>Period:</label> {{ item.period | formatPeriod }}
+        </div>
+        <p>{{ item.description }}</p>
+        {% if item.url %}
+        <button onclick="window.open('{{ item.url }}', '_blank')">Open</button>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

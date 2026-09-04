@@ -263,8 +263,8 @@
     const messages = [
       { text: "It looks like you're viewing a CV. Would you like help?", action: null },
       { text: "Hi! I'm Clippy, your office assistant!", action: null },
-      { text: "Did you know Alessandro is a Full Stack Developer?", action: null },
-      { text: "This CV looks great! Want to download the PDF?", action: 'download' },
+      { text: "Did you know Alessandro works on systems integration?", action: null },
+      { text: "Want to download the PDF version?", action: 'download' },
       { text: "I see you're interested in retro themes. Nice choice!", action: null }
     ];
 
